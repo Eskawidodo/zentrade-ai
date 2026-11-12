@@ -71,7 +71,25 @@
                         android:textStyle="bold"
                         android:textAllCaps="true" />
                 </LinearLayout>
-            <!-- VPS Telemetry -->
+        </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="24dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:clipChildren="false"
+            android:id="@+id/content_container">
+<!-- VPS Telemetry -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -312,8 +330,8 @@
             </FrameLayout>
             
             <Space android:layout_width="match_parent" android:layout_height="16dp" />
-            </RelativeLayout>
-        </androidx.appcompat.widget.Toolbar>
+            
+        
             <!-- Operational Configuration Quick Pills -->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -413,22 +431,7 @@
                 android:textStyle="bold"
                 android:paddingVertical="12dp"
                 app:cornerRadius="12dp" />
-    </com.google.android.material.appbar.AppBarLayout>
     
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clipToPadding="false"
-        android:paddingBottom="24dp"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
-        
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp"
-            android:clipChildren="false"
-            android:id="@+id/content_container">
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
