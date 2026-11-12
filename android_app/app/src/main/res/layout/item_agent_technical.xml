@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_container"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        
+        <FrameLayout
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_icon_secondary_transparent"
+            android:layout_marginEnd="8dp">
+        </FrameLayout>
+        
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Technical Analyst"
+                    android:textColor="@color/on_surface"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="6dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#4D604403"
+                    android:text="AGENT 01"
+                    android:textColor="@color/secondary"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="2dp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Triple-Monitor High Frequency"
+                android:textColor="@color/on_surface_variant"
+                android:textSize="11sp" />
+        </LinearLayout>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#26E9C176"
+            android:text="SCANNING"
+            android:textColor="@color/secondary"
+            android:textSize="10sp"
+    <!-- Speech Bubble -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded_container_high"
+        android:orientation="vertical"
+        android:padding="12dp">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="“H1 Support touched on EURUSD (1.08250) → switching to M5 confirmation candle... Bullish engulfing printed.”"
+            android:textColor="@color/on_surface"
+            android:textSize="12sp"
+            android:lineSpacingExtra="2dp" />
+    </LinearLayout>
+
+    <!-- Mini Sparkline visualization / pipeline -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:baselineAligned="false">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TIMEFRAME PIPELINE"
+            android:textColor="@color/on_surface_variant"
+            android:textSize="9sp"
+            android:textStyle="bold" />
+            
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="H4: BULL"
+                android:textColor="@color/primary"
+                android:background="@drawable/bg_chip_unselected"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:textSize="9sp"
+                android:layout_marginEnd="4dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="H1: KEY LVL"
+                android:textColor="@color/primary"
+                android:background="@drawable/bg_chip_unselected"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:textSize="9sp"
+                android:layout_marginEnd="4dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="M5: TRIGGER"
+                android:textColor="@color/on_primary"
+                android:background="@drawable/bg_primary_transparent"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:textStyle="bold"
+                android:textSize="9sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+            android:textStyle="bold"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp" />
+    </LinearLayout>
+
+    <Space android:layout_width="match_parent" android:layout_height="8dp" />

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#F2CA50</color>
+    <color name="on_primary">#3C2F00</color>
+    <color name="primary_container">#D4AF37</color>
+    <color name="on_primary_container">#554300</color>
+    <color name="secondary">#E9C176</color>
+    <color name="on_secondary">#412D00</color>
+    <color name="secondary_container">#604403</color>
+    <color name="on_secondary_container">#DAB36A</color>
+    <color name="tertiary">#58E7AA</color>
+    <color name="on_tertiary">#003824</color>
+    <color name="tertiary_container">#33CA90</color>
+    <color name="on_tertiary_container">#005035</color>
+    <color name="error">#FFB4AB</color>
+    <color name="error_container">#93000A</color>
+    <color name="on_error">#690005</color>
+    <color name="on_error_container">#FFDAD6</color>
+    <color name="background">#121316</color>
+    <color name="on_background">#E3E2E6</color>
+    <color name="surface">#121316</color>
+    <color name="on_surface">#E3E2E6</color>
+    <color name="surface_variant">#343538</color>
+    <color name="on_surface_variant">#D0C5AF</color>
+    <color name="outline">#99907C</color>
+    <color name="surface_container_lowest">#0D0E11</color>
+    <color name="surface_container_low">#1B1B1F</color>
+    <color name="surface_container">#1F1F23</color>
+    <color name="surface_container_high">#292A2D</color>
+    <color name="surface_container_highest">#343538</color>
+    <color name="transparent">#00000000</color>
+    
+    <!-- Backgrounds for overlay -->
+    <color name="tertiary_pulse">#BF58E7AA</color> <!-- 75% opacity -->
+    
+</resources>

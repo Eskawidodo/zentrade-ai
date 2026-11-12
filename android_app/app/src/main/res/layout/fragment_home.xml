@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface_container_lowest">
+        
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:contentInsetStart="16dp"
+            app:contentInsetEnd="16dp">
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zentrade AI"
+                        android:textColor="@color/primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" / "
+                        android:textColor="#66E3E2E6"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Home"
+                        android:textColor="@color/on_surface"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:background="@drawable/bg_circle_tertiary"
+                        android:layout_marginEnd="6dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LIVE 24/7 VPS ONLINE (14ms)"
+                        android:textColor="@color/tertiary"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true" />
+                </LinearLayout>
+            <!-- VPS Telemetry -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rounded_container_low"
+                android:padding="12dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_circle_tertiary"
+                    android:layout_marginEnd="8dp" />
+                    
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="VPS CONNECTED: 154.26.132.80:8000 | 18ms | Ubuntu 22.04"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="11sp"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
+                    
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_primary_transparent"
+                    android:text="DEDICATED"
+                    android:textColor="@color/primary"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="2dp" />
+            </LinearLayout>
+
+            <Space android:layout_width="match_parent" android:layout_height="12dp" />
+            <!-- Quick Metrics Ticker -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+                
+                <!-- Equity -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded_container"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:layout_marginEnd="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EQUITY"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$48,250.80"
+                        android:textColor="@color/primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- Balance -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded_container"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:layout_marginEnd="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BALANCE"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$45,000.00"
+                        android:textColor="@color/on_surface"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- Floating P/L -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded_container"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FLOATING P/L"
+                        android:textColor="@color/tertiary"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp"
+                        android:baselineAligned="true">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+$3,250.80"
+                            android:textColor="@color/tertiary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Space android:layout_width="match_parent" android:layout_height="16dp" />
+            <!-- Agent State Filter Chips -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="4dp">
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ALL STATIONS (4)"
+                        android:textColor="@color/on_primary"
+                        android:background="@drawable/bg_chip_selected"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="8dp" />
+                        
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SCANNING"
+                        android:textColor="@color/on_surface_variant"
+                        android:background="@drawable/bg_chip_unselected"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NEWS FILTER"
+                        android:textColor="@color/on_surface_variant"
+                        android:background="@drawable/bg_chip_unselected"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="8dp" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <Space android:layout_width="match_parent" android:layout_height="16dp" />
+
+            <!-- Agent Virtual Workspace 2D Visualizer Canvas -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_workspace_canvas">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    
+                    <!-- Top Ticker -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#E61B1B1F"
+                        android:padding="12dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Autonomous Floor Telemetry"
+                            android:textColor="@color/primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                        <View
+                            android:layout_width="6dp"
+                            android:layout_height="6dp"
+                            android:background="@drawable/bg_circle_tertiary"
+                            android:layout_marginEnd="6dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CONSENSUS: 4/4"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Pods Container -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        
+                        <!-- AGENT 1: Supervisor -->
+                        <include layout="@layout/item_agent_supervisor" />
+                        
+                        <Space android:layout_width="match_parent" android:layout_height="16dp" />
+                        
+                        <!-- AGENT 2: Technical -->
+                        <include layout="@layout/item_agent_technical" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+            
+            <Space android:layout_width="match_parent" android:layout_height="16dp" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+            <!-- Operational Configuration Quick Pills -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rounded_container"
+                android:padding="12dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PRESETS:"
+                    android:textColor="@color/on_surface"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="12dp" />
+                    
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MTF: H1 + M5"
+                    android:textColor="@color/on_surface"
+                    android:background="@drawable/bg_chip_unselected"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:textSize="11sp"
+                    android:layout_marginEnd="8dp" />
+                    
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Auto-BE: ON"
+                    android:textColor="@color/tertiary"
+                    android:background="@drawable/bg_chip_unselected"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <Space android:layout_width="match_parent" android:layout_height="16dp" />
+            
+            <!-- Master Bot Switch -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rounded_container_elevated"
+                android:padding="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                
+                <!-- Icon -->
+                <FrameLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_icon_primary_transparent"
+                    android:layout_marginEnd="12dp">
+                    <!-- Icon shape here -->
+                </FrameLayout>
+                
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BOT RUNNING (AUTONOMOUS)"
+                        android:textColor="@color/primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Full Algorithmic Delegation Active"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+            </LinearLayout>
+
+            <Space android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- Emergency Kill-Switch -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/error_container"
+                android:textColor="@color/on_error"
+                android:text="EMERGENCY CLOSE ALL"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingVertical="12dp"
+                app:cornerRadius="12dp" />
+    </com.google.android.material.appbar.AppBarLayout>
+    
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="24dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:clipChildren="false"
+            android:id="@+id/content_container">
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
