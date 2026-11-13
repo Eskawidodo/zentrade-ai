@@ -8,64 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:background="#D90D0E11"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Zt.LabelCaps"
-                android:text="ZENTRADE AI"
-                android:textColor="@color/primary"
-                android:letterSpacing="0.1" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Zt.HeadlineSm"
-                android:text="/"
-                android:textColor="#66E3E2E6"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Zt.HeadlineSm"
-                android:text="Trading"
-                android:textColor="@color/on_surface" />
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:paddingTop="2dp"
-                android:paddingBottom="2dp"
-                android:background="@drawable/bg_chip_vps"
-                android:layout_marginStart="6dp">
-                <View
-                    android:layout_width="6dp"
-                    android:layout_height="6dp"
-                    android:background="@drawable/bg_dot_tertiary"
-                    android:id="@+id/dot_vps"
-                    android:layout_marginEnd="6dp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Zt.NumSm"
-                    android:text="VPS 14ms"
-                    android:textColor="@color/tertiary"
-                    android:textSize="10sp"
-                    android:textAllCaps="true"
-                    android:letterSpacing="0.05"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </LinearLayout>
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"

@@ -8,13 +8,16 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.zentrade.ai.ui.home.HomeFragment;
+import com.zentrade.ai.ui.nav.BottomNavBar;
 import com.zentrade.ai.ui.trading.TradingFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "ZentradeAI";
+    private static final String KEY_TAB = "selected_tab";
+
+    private BottomNavBar bottomNav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,30 +25,43 @@ public class MainActivity extends AppCompatActivity {
         try {
             setContentView(R.layout.activity_main);
 
-            BottomNavigationView bottomNav = findViewById(R.id.bottom_nav_view);
-            bottomNav.setOnItemSelectedListener(item -> {
-                try {
-                    Fragment selectedFragment;
-                    if (item.getItemId() == R.id.navigation_home) {
-                        selectedFragment = new HomeFragment();
-                    } else if (item.getItemId() == R.id.navigation_trading) {
-                        selectedFragment = new TradingFragment();
-                    } else {
-                        // Placeholder untuk tab lain
-                        selectedFragment = new Fragment();
-                    }
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.nav_host_fragment, selectedFragment)
-                            .commitNow();
-                } catch (Throwable t) {
-                    showError(t);
-                }
-                return true;
-            });
+            bottomNav = new BottomNavBar(findViewById(R.id.bottom_nav_bar), this::showTab);
 
             if (savedInstanceState == null) {
-                bottomNav.setSelectedItemId(R.id.navigation_home);
+                bottomNav.select(BottomNavBar.HOME);
+            } else {
+                // Fragment dipulihkan otomatis; cukup samakan tampilan nav.
+                bottomNav.setSelectedSilently(savedInstanceState.getInt(KEY_TAB, BottomNavBar.HOME));
             }
+        } catch (Throwable t) {
+            showError(t);
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if (bottomNav != null) outState.putInt(KEY_TAB, Math.max(0, bottomNav.getCurrent()));
+    }
+
+    private void showTab(int tab) {
+        try {
+            Fragment fragment;
+            switch (tab) {
+                case BottomNavBar.HOME:
+                    fragment = new HomeFragment();
+                    break;
+                case BottomNavBar.TRADING:
+                    fragment = new TradingFragment();
+                    break;
+                default:
+                    // Placeholder untuk tab lain
+                    fragment = new Fragment();
+                    break;
+            }
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.nav_host_fragment, fragment)
+                    .commitNow();
         } catch (Throwable t) {
             showError(t);
         }

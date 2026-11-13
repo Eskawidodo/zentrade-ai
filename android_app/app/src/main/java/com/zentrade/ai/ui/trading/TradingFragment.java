@@ -46,7 +46,6 @@ public class TradingFragment extends Fragment {
         }
 
         // Titik berdenyut (animate-ping pada desain)
-        startPulse(view.findViewById(R.id.dot_vps));
         startPulse(view.findViewById(R.id.dot_tab_active));
     }
 
