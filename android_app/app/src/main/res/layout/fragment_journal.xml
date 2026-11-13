@@ -1,873 +1,1431 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121316"
-    android:clipToPadding="false"
+    android:background="@color/surface"
+    android:scrollbars="none"
     android:fillViewport="true"
-    android:paddingStart="16dp"
-    android:paddingTop="12dp"
-    android:paddingEnd="16dp"
-    android:paddingBottom="96dp"
-    android:scrollbars="none">
-
+    android:overScrollMode="never">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <!-- 1. HEADER CARD: Cognitive Journal -->
+        android:orientation="vertical"
+        android:paddingTop="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="32dp">
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_rounded_container_low"
-            android:elevation="6dp">
-
-            <!-- Ambient Backlight Glow -->
+            android:background="@drawable/bg_r8_signal">
             <View
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_gravity="top|end"
-                android:layout_marginTop="-24dp"
-                android:layout_marginEnd="-24dp"
-                android:alpha="0.25"
+                android:layout_width="176dp"
+                android:layout_height="176dp"
+                android:layout_gravity="end|top"
+                android:layout_marginEnd="-60dp"
+                android:layout_marginTop="-60dp"
                 android:background="@drawable/bg_glow_primary" />
-
+            <View
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:layout_gravity="start|bottom"
+                android:layout_marginStart="-60dp"
+                android:layout_marginBottom="-60dp"
+                android:background="@drawable/bg_glow_tertiary" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="14dp">
-
-                <!-- Icon Box -->
-                <FrameLayout
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/bg_r4_surface_high">
-
-                    <ImageView
-                        android:layout_width="22dp"
-                        android:layout_height="22dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_journal"
-                        app:tint="#F2CA50" />
-                </FrameLayout>
-
-                <!-- Title & Subtitle -->
+                android:gravity="center_vertical"
+                android:padding="16dp">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1">
+                    <FrameLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_r4_surface_high">
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_s_terminal"
+                            android:tint="@color/primary"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
+                        android:orientation="vertical"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:ellipsize="end"
-                            android:fontFamily="sans-serif-medium"
-                            android:maxLines="1"
-                            android:text="Cognitive Journal"
-                            android:textColor="#E3E2E6"
-                            android:textSize="16sp" />
-
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.HeadlineSm"
+                                android:text="Cognitive Journal"
+                                android:textColor="@color/on_surface"
+                                android:layout_weight="1"
+                                android:singleLine="true"
+                                android:ellipsize="end" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="NODE 01"
+                                android:textColor="@color/primary"
+                                android:background="@drawable/bg_r2_highest"
+                                android:paddingStart="6dp"
+                                android:paddingEnd="6dp"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:layout_marginStart="4dp"
+                                android:textAllCaps="false" />
+                        </LinearLayout>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="6dp"
-                            android:background="@drawable/bg_r2_highest"
-                            android:fontFamily="sans-serif-bold"
-                            android:letterSpacing="0.06"
-                            android:paddingStart="6dp"
-                            android:paddingTop="2dp"
-                            android:paddingEnd="6dp"
-                            android:paddingBottom="2dp"
-                            android:text="NODE\n01"
-                            android:textAlignment="center"
-                            android:textColor="#F2CA50"
-                            android:textSize="9sp" />
+                            style="@style/Zt.NumSm"
+                            android:text="SYNCED // VPS VECTOR DB v4.9.1"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_marginTop="2dp"
+                            android:singleLine="true"
+                            android:ellipsize="end" />
                     </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:ellipsize="end"
-                        android:fontFamily="monospace"
-                        android:maxLines="1"
-                        android:text="SYNCED // VPS VECTOR DB v4.9.1"
-                        android:textColor="#D0C5AF"
-                        android:textSize="11sp" />
                 </LinearLayout>
-
-                <!-- Latency Pill: 14ms STREAM -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/bg_r4_lowest"
-                    android:gravity="center_vertical"
                     android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_r2_container"
                     android:paddingStart="8dp"
-                    android:paddingTop="5dp"
                     android:paddingEnd="8dp"
-                    android:paddingBottom="5dp">
-
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginStart="8dp">
                     <View
-                        android:id="@+id/dot_stream_pulse"
-                        android:layout_width="7dp"
-                        android:layout_height="7dp"
-                        android:background="@drawable/bg_dot_tertiary" />
-
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:background="@drawable/bg_dot_tertiary"
+                        android:id="@+id/dot_stream"
+                        android:layout_marginEnd="6dp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="6dp"
-                        android:fontFamily="monospace"
+                        style="@style/Zt.NumSm"
                         android:text="14ms STREAM"
-                        android:textColor="#58E7AA"
-                        android:textSize="11sp" />
+                        android:textColor="@color/tertiary" />
                 </LinearLayout>
             </LinearLayout>
         </FrameLayout>
-
-        <!-- 2. IN-PAGE TAB SWITCHER -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:background="@drawable/bg_r8_lowest"
-            android:elevation="3dp"
             android:orientation="horizontal"
-            android:padding="4dp">
-
-            <!-- Tab 1: Reasoning -->
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_r4_lowest"
+            android:padding="4dp"
+            android:layout_marginTop="16dp">
             <LinearLayout
-                android:id="@+id/tab_btn_logs"
                 android:layout_width="0dp"
-                android:layout_height="36dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/tab_logs"
                 android:layout_weight="1"
-                android:background="@drawable/bg_r4_surface_high"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingStart="4dp"
-                android:paddingEnd="4dp">
-
+                android:foreground="?attr/selectableItemBackground"
+                android:background="@drawable/bg_r4_surface_high">
                 <ImageView
-                    android:id="@+id/tab_icon_logs"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:src="@drawable/ic_s_hub"
-                    app:tint="#F2CA50" />
-
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_s_stream"
+                    android:tint="@color/primary"
+                    android:id="@+id/tab_logs_icon" />
                 <TextView
-                    android:id="@+id/tab_text_logs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:ellipsize="end"
-                    android:fontFamily="sans-serif-bold"
-                    android:maxLines="1"
+                    style="@style/Zt.LabelCaps"
                     android:text="Reasoning"
-                    android:textColor="#F2CA50"
-                    android:textSize="11sp" />
+                    android:textColor="@color/primary"
+                    android:id="@+id/tab_logs_label"
+                    android:layout_marginStart="6dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textAllCaps="false" />
             </LinearLayout>
-
-            <!-- Tab 2: Closed Trades -->
             <LinearLayout
-                android:id="@+id/tab_btn_history"
                 android:layout_width="0dp"
-                android:layout_height="36dp"
-                android:layout_marginStart="4dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/tab_history"
                 android:layout_weight="1"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingStart="4dp"
-                android:paddingEnd="4dp">
-
+                android:foreground="?attr/selectableItemBackground">
                 <ImageView
-                    android:id="@+id/tab_icon_history"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:src="@drawable/ic_s_feed"
-                    app:tint="#D0C5AF" />
-
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_s_receipt"
+                    android:tint="@color/on_surface_variant"
+                    android:id="@+id/tab_history_icon" />
                 <TextView
-                    android:id="@+id/tab_text_history"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:ellipsize="end"
-                    android:fontFamily="sans-serif-bold"
-                    android:maxLines="1"
+                    style="@style/Zt.LabelCaps"
                     android:text="Closed Trades"
-                    android:textColor="#D0C5AF"
-                    android:textSize="11sp" />
+                    android:textColor="@color/on_surface_variant"
+                    android:id="@+id/tab_history_label"
+                    android:layout_marginStart="6dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textAllCaps="false" />
             </LinearLayout>
-
-            <!-- Tab 3: Memory Bank -->
             <LinearLayout
-                android:id="@+id/tab_btn_memory"
                 android:layout_width="0dp"
-                android:layout_height="36dp"
-                android:layout_marginStart="4dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/tab_memory"
                 android:layout_weight="1"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingStart="4dp"
-                android:paddingEnd="4dp">
-
+                android:foreground="?attr/selectableItemBackground">
                 <ImageView
-                    android:id="@+id/tab_icon_memory"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
                     android:src="@drawable/ic_s_psychology"
-                    app:tint="#D0C5AF" />
-
+                    android:tint="@color/on_surface_variant"
+                    android:id="@+id/tab_memory_icon" />
                 <TextView
-                    android:id="@+id/tab_text_memory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:ellipsize="end"
-                    android:fontFamily="sans-serif-bold"
-                    android:maxLines="1"
+                    style="@style/Zt.LabelCaps"
                     android:text="Memory Bank"
-                    android:textColor="#D0C5AF"
-                    android:textSize="11sp" />
+                    android:textColor="@color/on_surface_variant"
+                    android:id="@+id/tab_memory_label"
+                    android:layout_marginStart="6dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textAllCaps="false" />
             </LinearLayout>
         </LinearLayout>
-
-        <!-- ========================================================= -->
-        <!-- VIEW 1: LIVE AGENT REASONING CONSOLE                      -->
-        <!-- ========================================================= -->
         <LinearLayout
-            android:id="@+id/view_logs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
             android:orientation="vertical"
-            android:visibility="visible">
-
-            <!-- Console Control Header -->
+            android:id="@+id/view_logs"
+            android:layout_marginTop="16dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:paddingStart="2dp"
-                android:paddingEnd="2dp">
-
-                <TextView
+                android:gravity="center_vertical"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp">
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-bold"
-                    android:letterSpacing="0.08"
-                    android:text="LIVE AGENT TELEMETRY"
-                    android:textColor="#D0C5AF"
-                    android:textSize="11sp" />
-
-                <View
-                    android:layout_width="6dp"
-                    android:layout_height="6dp"
-                    android:layout_marginStart="8dp"
-                    android:background="@drawable/bg_dot_primary" />
-
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.LabelCaps"
+                        android:text="Live Agent Telemetry"
+                        android:textColor="@color/on_surface_variant"
+                        android:letterSpacing="0.05"
+                        android:textAllCaps="true" />
+                    <View
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:background="@drawable/bg_dot_primary"
+                        android:id="@+id/dot_live"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
                 <View
                     android:layout_width="0dp"
                     android:layout_height="1dp"
                     android:layout_weight="1" />
-
-                <!-- WIPE Button -->
                 <LinearLayout
-                    android:id="@+id/btn_wipe_console"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/bg_r4_surface_high"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:id="@+id/btn_wipe"
+                    android:background="@drawable/bg_r2_high"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingStart="8dp"
-                    android:paddingTop="4dp"
-                    android:paddingEnd="8dp"
-                    android:paddingBottom="4dp">
-
-                    <ImageView
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:src="@drawable/ic_s_lock_reset"
-                        app:tint="#D0C5AF" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:fontFamily="monospace"
-                        android:text="WIPE"
-                        android:textColor="#D0C5AF"
-                        android:textSize="11sp" />
-                </LinearLayout>
-
-                <!-- AUTO-POLL Badge -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:background="@drawable/bg_r4_container"
-                    android:fontFamily="monospace"
-                    android:paddingStart="8dp"
-                    android:paddingTop="4dp"
-                    android:paddingEnd="8dp"
-                    android:paddingBottom="4dp"
-                    android:text="AUTO-POLL: ON"
-                    android:textColor="#D0C5AF"
-                    android:textSize="11sp" />
-            </LinearLayout>
-
-            <!-- Terminal Box -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/bg_r8_lowest"
-                android:elevation="8dp"
-                android:orientation="vertical"
-                android:padding="14dp">
-
-                <!-- Window Title Bar -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingBottom="10dp">
-
-                    <View
-                        android:layout_width="9dp"
-                        android:layout_height="9dp"
-                        android:background="@drawable/bg_r2_error40"
-                        android:backgroundTint="#93000A" />
-
-                    <View
-                        android:layout_width="9dp"
-                        android:layout_height="9dp"
-                        android:layout_marginStart="5dp"
-                        android:background="@drawable/bg_r2_secondary_container"
-                        android:backgroundTint="#604403" />
-
-                    <View
-                        android:layout_width="9dp"
-                        android:layout_height="9dp"
-                        android:layout_marginStart="5dp"
-                        android:background="@drawable/bg_dot_tertiary" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="6dp"
-                        android:layout_weight="1"
-                        android:ellipsize="end"
-                        android:fontFamily="monospace"
-                        android:maxLines="1"
-                        android:text="vps-mt5-bridge@ai-cluster:~$"
-                        android:textColor="#D0C5AF"
-                        android:textSize="11sp" />
-
-                    <ImageView
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:src="@drawable/ic_s_memory"
-                        app:tint="#58E7AA" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:fontFamily="monospace"
-                        android:text="TLS_v1.3"
-                        android:textColor="#58E7AA"
-                        android:textSize="11sp" />
-                </LinearLayout>
-
-                <!-- Dynamic Terminal Feed Container -->
-                <LinearLayout
-                    android:id="@+id/terminal_feed_container"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical" />
-
-                <!-- Realtime Input Prompt -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="top"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="monospace"
-                        android:text="❯ "
-                        android:textColor="#F2CA50"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="monospace"
-                        android:lineSpacingExtra="2dp"
-                        android:text="Awaiting incoming M1 tick stream from MT5 Bridge..."
-                        android:textColor="#D0C5AF"
-                        android:textSize="11sp" />
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- ========================================================= -->
-        <!-- VIEW 2: CLOSED TRADES HISTORY                             -->
-        <!-- ========================================================= -->
-        <LinearLayout
-            android:id="@+id/view_history"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:orientation="vertical"
-            android:visibility="gone">
-
-            <!-- KPI Grid Row 1 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <!-- Win Rate -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_rounded_container_low"
-                    android:orientation="vertical"
-                    android:padding="12dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:fontFamily="sans-serif-bold"
-                            android:letterSpacing="0.06"
-                            android:text="WIN RATE"
-                            android:textColor="#D0C5AF"
-                            android:textSize="10sp" />
-
-                        <ImageView
-                            android:layout_width="15dp"
-                            android:layout_height="15dp"
-                            android:src="@drawable/ic_s_pie_chart"
-                            app:tint="#58E7AA" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:gravity="bottom"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="monospace"
-                            android:text="74.2%"
-                            android:textColor="#58E7AA"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:fontFamily="monospace"
-                            android:text="(23/31)"
-                            android:textColor="#D0C5AF"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <!-- Profit Factor -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_rounded_container_low"
-                    android:orientation="vertical"
-                    android:padding="12dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:fontFamily="sans-serif-bold"
-                            android:letterSpacing="0.06"
-                            android:text="PROFIT FACTOR"
-                            android:textColor="#D0C5AF"
-                            android:textSize="10sp" />
-
-                        <ImageView
-                            android:layout_width="15dp"
-                            android:layout_height="15dp"
-                            android:src="@drawable/ic_s_trending_up"
-                            app:tint="#F2CA50" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:gravity="bottom"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="monospace"
-                            android:text="2.84"
-                            android:textColor="#F2CA50"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:fontFamily="monospace"
-                            android:text="Prime"
-                            android:textColor="#58E7AA"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- KPI Grid Row 2 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
-                <!-- Total Net PnL -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_rounded_container_low"
-                    android:orientation="vertical"
-                    android:padding="12dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:fontFamily="sans-serif-bold"
-                            android:letterSpacing="0.06"
-                            android:text="TOTAL NET PNL"
-                            android:textColor="#D0C5AF"
-                            android:textSize="10sp" />
-
-                        <ImageView
-                            android:layout_width="15dp"
-                            android:layout_height="15dp"
-                            android:src="@drawable/ic_s_balance"
-                            app:tint="#58E7AA" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:fontFamily="monospace"
-                        android:text="+$8,420.50"
-                        android:textColor="#58E7AA"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <!-- Avg R:R Ratio -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_rounded_container_low"
-                    android:orientation="vertical"
-                    android:padding="12dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:fontFamily="sans-serif-bold"
-                            android:letterSpacing="0.06"
-                            android:text="AVG R:R RATIO"
-                            android:textColor="#D0C5AF"
-                            android:textSize="10sp" />
-
-                        <ImageView
-                            android:layout_width="15dp"
-                            android:layout_height="15dp"
-                            android:src="@drawable/ic_s_gavel"
-                            app:tint="#E9C176" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:gravity="bottom"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="monospace"
-                            android:text="1:2.15"
-                            android:textColor="#E9C176"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:fontFamily="monospace"
-                            android:text="target"
-                            android:textColor="#D0C5AF"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- Historical Executions Header -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="sans-serif-bold"
-                    android:letterSpacing="0.08"
-                    android:text="HISTORICAL EXECUTIONS"
-                    android:textColor="#D0C5AF"
-                    android:textSize="11sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
-                    android:text="SORT: NEWEST FIRST"
-                    android:textColor="#D0C5AF"
-                    android:textSize="11sp" />
-            </LinearLayout>
-
-            <!-- Container untuk Kartu Trade -->
-            <LinearLayout
-                android:id="@+id/closed_trades_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </LinearLayout>
-
-        <!-- ========================================================= -->
-        <!-- VIEW 3: AGENT MEMORY BANK                                 -->
-        <!-- ========================================================= -->
-        <LinearLayout
-            android:id="@+id/view_memory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:orientation="vertical"
-            android:visibility="gone">
-
-            <!-- Vector Embeddings Header Card -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_rounded_container_low"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="14dp">
-
-                <FrameLayout
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/bg_r4_surface_high">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_s_psychology"
-                        app:tint="#F2CA50" />
-                </FrameLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="Vector Embeddings"
-                        android:textColor="#E3E2E6"
-                        android:textSize="15sp" />
-
-                    <TextView
-                        android:id="@+id/tv_heuristics_count"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:fontFamily="monospace"
-                        android:text="1,492 HEURISTICS REFINED"
-                        android:textColor="#D0C5AF"
-                        android:textSize="11sp" />
-                </LinearLayout>
-
-                <!-- RETRAIN Button -->
-                <LinearLayout
-                    android:id="@+id/btn_retrain_memory"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_btn_gold"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingStart="10dp"
-                    android:paddingTop="6dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="6dp">
-
+                    android:foreground="?attr/selectableItemBackground">
                     <ImageView
                         android:layout_width="14dp"
                         android:layout_height="14dp"
-                        android:src="@drawable/ic_nav_settings"
-                        app:tint="#3C2F00" />
-
+                        android:src="@drawable/ic_s_refresh"
+                        android:tint="@color/on_surface_variant" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:fontFamily="sans-serif-bold"
-                        android:letterSpacing="0.06"
-                        android:text="RETRAIN"
-                        android:textColor="#3C2F00"
-                        android:textSize="11sp" />
+                        style="@style/Zt.NumSm"
+                        android:text="WIPE"
+                        android:textColor="@color/on_surface_variant"
+                        android:layout_marginStart="4dp" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Zt.NumSm"
+                    android:text="AUTO-POLL: ON"
+                    android:textColor="@color/on_surface_variant"
+                    android:background="@drawable/bg_r2_container"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginStart="4dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_r8_lowest"
+                android:padding="16dp"
+                android:layout_marginTop="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/bg_dot_error_container" />
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/bg_dot_secondary_container"
+                            android:layout_marginStart="6dp" />
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/bg_dot_tertiary_container"
+                            android:layout_marginStart="6dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="vps-mt5-bridge@ai-cluster:~$"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_marginStart="8dp"
+                            android:singleLine="true"
+                            android:ellipsize="end" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="8dp">
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:src="@drawable/ic_s_dns"
+                            android:tint="@color/tertiary" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="TLS_v1.3"
+                            android:textColor="@color/tertiary"
+                            android:layout_marginStart="4dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/terminal_feed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="top"
+                    android:layout_marginTop="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.NumSm"
+                        android:text="❯"
+                        android:textColor="@color/primary" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.NumSm"
+                        android:text="Awaiting incoming M1 tick stream from MT5 Bridge..."
+                        android:textColor="@color/on_surface_variant"
+                        android:id="@+id/tv_awaiting"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1" />
                 </LinearLayout>
             </LinearLayout>
-
-            <!-- Memory Lessons Container -->
-            <LinearLayout
-                android:id="@+id/memory_lessons_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical" />
-
-            <!-- Autonomous Optimization Footer Card -->
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/view_history"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:background="@drawable/bg_r8_lowest"
-                android:gravity="center"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="top">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_r8_signal"
+                        android:padding="8dp"
+                        android:layout_marginEnd="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="Win Rate"
+                                android:textColor="@color/on_surface_variant"
+                                android:layout_weight="1"
+                                android:textAllCaps="false" />
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_s_donut"
+                                android:tint="@color/tertiary" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="bottom"
+                            android:layout_marginTop="4dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumLg"
+                                android:text="74.2%"
+                                android:textColor="@color/tertiary" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumSm"
+                                android:text="(23/31)"
+                                android:textColor="@color/on_surface_variant"
+                                android:layout_marginStart="6dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_r8_signal"
+                        android:padding="8dp"
+                        android:layout_marginEnd="0dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="Profit Factor"
+                                android:textColor="@color/on_surface_variant"
+                                android:layout_weight="1"
+                                android:textAllCaps="false" />
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_s_trending_up"
+                                android:tint="@color/primary" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="bottom"
+                            android:layout_marginTop="4dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumLg"
+                                android:text="2.84"
+                                android:textColor="@color/primary" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumSm"
+                                android:text="Prime"
+                                android:textColor="@color/tertiary"
+                                android:layout_marginStart="6dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="top"
+                    android:layout_marginTop="4dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_r8_signal"
+                        android:padding="8dp"
+                        android:layout_marginEnd="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="Total Net PnL"
+                                android:textColor="@color/on_surface_variant"
+                                android:layout_weight="1"
+                                android:textAllCaps="false" />
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_s_wallet"
+                                android:tint="@color/tertiary" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="bottom"
+                            android:layout_marginTop="4dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumLg"
+                                android:text="+$8,420.50"
+                                android:textColor="@color/tertiary" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_r8_signal"
+                        android:padding="8dp"
+                        android:layout_marginEnd="0dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="Avg R:R Ratio"
+                                android:textColor="@color/on_surface_variant"
+                                android:layout_weight="1"
+                                android:textAllCaps="false" />
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_s_balance"
+                                android:tint="@color/secondary" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="bottom"
+                            android:layout_marginTop="4dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumLg"
+                                android:text="1:2.15"
+                                android:textColor="@color/secondary" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumSm"
+                                android:text="target"
+                                android:textColor="@color/on_surface_variant"
+                                android:layout_marginStart="6dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_marginTop="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.LabelCaps"
+                        android:text="Historical Executions"
+                        android:textColor="@color/on_surface_variant"
+                        android:letterSpacing="0.05"
+                        android:layout_weight="1"
+                        android:textAllCaps="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.NumSm"
+                        android:text="SORT: NEWEST FIRST"
+                        android:textColor="@color/on_surface_variant" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_r8_signal"
+                    android:padding="16dp"
+                    android:layout_marginTop="8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.HeadlineSm"
+                                android:text="EURUSD"
+                                android:textColor="@color/on_surface"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="BUY 0.85 LOTS"
+                                android:textColor="@color/primary"
+                                android:background="@drawable/bg_r2_highest"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:layout_marginStart="8dp"
+                                android:textAllCaps="true" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/bg_r2_tertiary10"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp">
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:src="@drawable/ic_s_check_circle"
+                                android:tint="@color/tertiary" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="TP HIT"
+                                android:textColor="@color/tertiary"
+                                android:textStyle="bold"
+                                android:layout_marginStart="4dp"
+                                android:textAllCaps="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="top"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:layout_marginTop="4dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="EXECUTION RANGE"
+                                android:textColor="@color/on_surface_variant"
+                                android:textAllCaps="false" />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="2dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.NumSm"
+                                    android:text="1.08120"
+                                    android:textColor="@color/on_surface" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.NumSm"
+                                    android:text="→"
+                                    android:textColor="@color/on_surface_variant"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginEnd="4dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.NumSm"
+                                    android:text="1.08540"
+                                    android:textColor="@color/on_surface" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="end">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="NET PROFIT"
+                                android:textColor="@color/on_surface_variant"
+                                android:textAllCaps="false" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumMd"
+                                android:text="+$357.00"
+                                android:textColor="@color/tertiary"
+                                android:layout_marginTop="2dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="4dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="Duration: 42m 18s"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="Risk: $180.00 (1:1.98)"
+                            android:textColor="@color/on_surface_variant" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_r8_signal"
+                    android:padding="16dp"
+                    android:layout_marginTop="8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.HeadlineSm"
+                                android:text="XAUUSD"
+                                android:textColor="@color/on_surface"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="BUY 0.50 LOTS"
+                                android:textColor="@color/primary"
+                                android:background="@drawable/bg_r2_highest"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:layout_marginStart="8dp"
+                                android:textAllCaps="true" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/bg_r2_tertiary10"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp">
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:src="@drawable/ic_s_check_circle"
+                                android:tint="@color/tertiary" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="TP HIT"
+                                android:textColor="@color/tertiary"
+                                android:textStyle="bold"
+                                android:layout_marginStart="4dp"
+                                android:textAllCaps="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="top"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:layout_marginTop="4dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="EXECUTION RANGE"
+                                android:textColor="@color/on_surface_variant"
+                                android:textAllCaps="false" />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="2dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.NumSm"
+                                    android:text="2,328.00"
+                                    android:textColor="@color/on_surface" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.NumSm"
+                                    android:text="→"
+                                    android:textColor="@color/on_surface_variant"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginEnd="4dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.NumSm"
+                                    android:text="2,342.00"
+                                    android:textColor="@color/on_surface" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="end">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="NET PROFIT"
+                                android:textColor="@color/on_surface_variant"
+                                android:textAllCaps="false" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumMd"
+                                android:text="+$700.00"
+                                android:textColor="@color/tertiary"
+                                android:layout_marginTop="2dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="4dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="Duration: 1h 14m"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="Risk: $250.00 (1:2.80)"
+                            android:textColor="@color/on_surface_variant" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_r8_signal"
+                    android:padding="16dp"
+                    android:layout_marginTop="8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.HeadlineSm"
+                                android:text="GBPUSD"
+                                android:textColor="@color/on_surface"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="SELL 0.70 LOTS"
+                                android:textColor="@color/error"
+                                android:background="@drawable/bg_r2_highest"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:layout_marginStart="8dp"
+                                android:textAllCaps="true" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/bg_r2_error40"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp">
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:src="@drawable/ic_s_cancel"
+                                android:tint="@color/error" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="SL HIT"
+                                android:textColor="@color/error"
+                                android:textStyle="bold"
+                                android:layout_marginStart="4dp"
+                                android:textAllCaps="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="top"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:layout_marginTop="4dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="EXECUTION RANGE"
+                                android:textColor="@color/on_surface_variant"
+                                android:textAllCaps="false" />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="2dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.NumSm"
+                                    android:text="1.27400"
+                                    android:textColor="@color/on_surface" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.NumSm"
+                                    android:text="→"
+                                    android:textColor="@color/on_surface_variant"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginEnd="4dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.NumSm"
+                                    android:text="1.27620"
+                                    android:textColor="@color/on_surface" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="end">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="NET LOSS"
+                                android:textColor="@color/on_surface_variant"
+                                android:textAllCaps="false" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumMd"
+                                android:text="-$154.00"
+                                android:textColor="@color/error"
+                                android:layout_marginTop="2dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="4dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="Duration: 18m 04s"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="Safeguard Limit: 1.0%"
+                            android:textColor="@color/on_surface_variant" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/view_memory"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_r8_signal"
                 android:padding="16dp">
-
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1">
+                    <FrameLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_r4_surface_high">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_s_neurology"
+                            android:tint="@color/primary"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.HeadlineSm"
+                            android:text="Vector Embeddings"
+                            android:textColor="@color/on_surface" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="1,492 HEURISTICS REFINED"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:id="@+id/btn_retrain"
+                    android:background="@drawable/bg_r2_primary"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginStart="8dp">
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_s_tune"
+                        android:tint="@color/on_primary" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.LabelCaps"
+                        android:text="RETRAIN"
+                        android:textColor="@color/on_primary"
+                        android:layout_marginStart="4dp"
+                        android:textAllCaps="true" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_r8_signal"
+                android:padding="16dp"
+                android:layout_marginTop="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="LESSON #42"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/bg_r2_highest"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.LabelCaps"
+                            android:text="LIQUIDITY_GAP"
+                            android:textColor="@color/secondary"
+                            android:layout_marginStart="8dp"
+                            android:textAllCaps="true" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.NumSm"
+                        android:text="WEIGHT: 0.94"
+                        android:textColor="@color/tertiary" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Zt.BodySm"
+                    android:text=""
+                    android:textColor="@color/on_surface"
+                    android:id="@+id/tv_lesson_1"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginTop="8dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="8dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/ic_s_check"
+                            android:tint="@color/tertiary" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="Rule Applied to Execution Pipeline"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_marginStart="4dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.NumSm"
+                        android:text="2d ago"
+                        android:textColor="@color/on_surface_variant"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_r8_signal"
+                android:padding="16dp"
+                android:layout_marginTop="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="LESSON #38"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/bg_r2_highest"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.LabelCaps"
+                            android:text="SPREAD_SURGE"
+                            android:textColor="@color/secondary"
+                            android:layout_marginStart="8dp"
+                            android:textAllCaps="true" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.NumSm"
+                        android:text="WEIGHT: 0.88"
+                        android:textColor="@color/tertiary" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Zt.BodySm"
+                    android:text=""
+                    android:textColor="@color/on_surface"
+                    android:id="@+id/tv_lesson_2"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginTop="8dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="8dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/ic_s_check"
+                            android:tint="@color/tertiary" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="Filter Injected to Risk Agent"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_marginStart="4dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.NumSm"
+                        android:text="5d ago"
+                        android:textColor="@color/on_surface_variant"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@drawable/bg_r8_lowest"
+                android:padding="16dp"
+                android:layout_marginTop="8dp">
                 <FrameLayout
-                    android:layout_width="34dp"
-                    android:layout_height="34dp"
-                    android:background="@drawable/bg_oval_highest">
-
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_oval_container">
                     <ImageView
                         android:layout_width="18dp"
                         android:layout_height="18dp"
-                        android:layout_gravity="center"
                         android:src="@drawable/ic_s_verified"
-                        app:tint="#F2CA50" />
+                        android:tint="@color/primary"
+                        android:layout_gravity="center" />
                 </FrameLayout>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-bold"
-                    android:letterSpacing="0.06"
-                    android:text="AUTONOMOUS OPTIMIZATION ENGAGED"
-                    android:textColor="#E3E2E6"
-                    android:textSize="11sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    style="@style/Zt.LabelCaps"
+                    android:text="Autonomous Optimization Engaged"
+                    android:textColor="@color/on_surface"
                     android:gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:textAllCaps="false" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Zt.BodySm"
                     android:text="The VPS updates weights continuously after every 10 executed market orders."
-                    android:textColor="#D0C5AF"
-                    android:textSize="12sp" />
+                    android:textColor="@color/on_surface_variant"
+                    android:gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:maxWidth="320dp" />
             </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+</ScrollView>
