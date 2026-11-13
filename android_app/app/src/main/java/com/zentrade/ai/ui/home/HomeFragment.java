@@ -59,12 +59,6 @@ public class HomeFragment extends Fragment {
         office = view.findViewById(R.id.office_view);
         chipScroll = view.findViewById(R.id.chip_scroll);
         chipContainer = view.findViewById(R.id.chip_container);
-
-        if (office != null) {
-            // Sementara: tap kantor untuk simulasi "ada setup trading" / "idle".
-            // Nanti diganti sinyal asli: office.setTradeSetupActive(true/false)
-            office.setOnClickListener(v -> office.setTradeSetupActive(!office.isTradeSetupActive()));
-        }
     }
 
     @Override
