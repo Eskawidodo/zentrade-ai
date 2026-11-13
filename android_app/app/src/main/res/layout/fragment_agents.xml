@@ -1,0 +1,1561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface"
+    android:scrollbars="none"
+    android:fillViewport="true"
+    android:overScrollMode="never">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="32dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_s_hub"
+                        android:tint="@color/primary"
+                        android:id="@+id/icon_hub" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.HeadlineSm"
+                        android:text="Dynamic Neural Swarm"
+                        android:textColor="@color/primary"
+                        android:letterSpacing="0.025"
+                        android:layout_marginStart="4dp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_r12_high"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+                    <View
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:background="@drawable/bg_dot_tertiary"
+                        android:layout_marginEnd="6dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.NumSm"
+                        android:text="FASTAPI v0.110"
+                        android:textColor="@color/tertiary" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="top"
+                android:layout_marginTop="8dp">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_r8_signal"
+                    android:padding="8dp"
+                    android:layout_marginEnd="4dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.LabelCaps"
+                            android:text="Swarm Matrix"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="4 / 4 ONLINE"
+                            android:textColor="@color/tertiary"
+                            android:gravity="end"
+                            android:layout_marginStart="4dp"
+                            android:maxWidth="60dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="bottom"
+                        android:layout_marginTop="4dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.HeadlineMd"
+                            android:text="100%"
+                            android:textColor="@color/on_surface" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.BodySm"
+                            android:text="Cluster Load"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_marginStart="4dp" />
+                    </LinearLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:background="@drawable/bg_bar_track"
+                        android:layout_marginTop="8dp">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_bar_fill" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_r8_signal"
+                    android:padding="8dp"
+                    android:layout_marginStart="4dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.LabelCaps"
+                            android:text="Consensus Layer"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_weight="1" />
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:src="@drawable/ic_s_verified"
+                            android:tint="@color/primary" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.HeadlineMd"
+                        android:text="Autonomous"
+                        android:textColor="@color/primary"
+                        android:layout_marginTop="4dp"
+                        android:singleLine="true"
+                        android:ellipsize="end" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.NumSm"
+                        android:text="Strict Unanimous Policy"
+                        android:textColor="@color/on_surface_variant"
+                        android:layout_marginTop="2dp"
+                        android:singleLine="true"
+                        android:ellipsize="end" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/btn_add_agent"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:background="@drawable/bg_btn_gold"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_marginTop="8dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_s_add_circle"
+                    android:tint="@color/on_primary" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Zt.HeadlineSm"
+                    android:text="+ Tambah Agent Baru"
+                    android:textColor="@color/on_primary"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.025"
+                    android:layout_marginStart="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_s_memory"
+                        android:tint="@color/secondary" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.HeadlineMd"
+                        android:text="Active Agent Registry"
+                        android:textColor="@color/on_surface"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Zt.NumSm"
+                    android:text="4 Node Pipeline"
+                    android:textColor="@color/on_surface_variant"
+                    android:background="@drawable/bg_r2_container"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp" />
+            </LinearLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_r8_signal"
+                android:layout_marginTop="16dp">
+                <View
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_gravity="end|top"
+                    android:layout_marginEnd="-48dp"
+                    android:layout_marginTop="-48dp"
+                    android:background="@drawable/bg_glow_primary" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="top">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_weight="1">
+                            <FrameLayout
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/bg_r4_surface_high">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_s_candlestick"
+                                    android:tint="@color/primary"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginStart="4dp"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.HeadlineSm"
+                                    android:text="Technical Agent"
+                                    android:textColor="@color/on_surface"
+                                    android:singleLine="true"
+                                    android:ellipsize="end" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.LabelCaps"
+                                    android:text="Pattern &amp; Liquidity Scanner"
+                                    android:textColor="@color/primary"
+                                    android:letterSpacing="0.05" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switch_tech"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:minWidth="0dp"
+                            app:thumb="@drawable/sw_thumb"
+                            app:track="@drawable/sw_track"
+                            app:showText="false"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_r4_container"
+                        android:padding="8dp"
+                        android:layout_marginTop="8dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.LabelCaps"
+                            android:text="Engine Model"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_weight="1" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/bg_r2_high"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:id="@+id/model_tech_container"
+                            android:clickable="true"
+                            android:focusable="true">
+                            <View
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:background="@drawable/bg_dot_tertiary"
+                                android:layout_marginEnd="6dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumSm"
+                                android:text="Claude 3.5 Sonnet"
+                                android:textColor="@color/primary"
+                                android:id="@+id/tv_model_tech" />
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:src="@drawable/ic_s_expand_more"
+                                android:tint="@color/primary"
+                                android:layout_marginStart="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_r4_lowest"
+                        android:padding="10dp"
+                        android:layout_marginTop="8dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="System Prompt Runtime"
+                                android:textColor="@color/on_surface_variant"
+                                android:layout_weight="1" />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:clickable="true"
+                                android:focusable="true">
+                                <ImageView
+                                    android:layout_width="13dp"
+                                    android:layout_height="13dp"
+                                    android:src="@drawable/ic_s_edit_note"
+                                    android:tint="@color/primary" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.LabelCaps"
+                                    android:text="Quick Edit"
+                                    android:textColor="@color/primary"
+                                    android:layout_marginStart="2dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.BodySm"
+                            android:text="&quot;You are the Senior Technical Analyst. Scan H1 support/resistance zones, detect M5 candlestick patterns (Bullish Engulfing, Pinbar) and RSI pullbacks...&quot;"
+                            android:textColor="@color/on_surface_variant"
+                            android:fontFamily="monospace"
+                            android:textStyle="italic"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:lineSpacingExtra="2dp"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="top"
+                        android:layout_marginTop="12dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_r2_container"
+                            android:padding="6dp"
+                            android:layout_marginEnd="6dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="Timeframe"
+                                android:textColor="@color/on_surface_variant" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumSm"
+                                android:text="H1, M5"
+                                android:textColor="@color/on_surface"
+                                android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_r2_container"
+                            android:padding="6dp"
+                            android:layout_marginEnd="6dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="S/R Lookback"
+                                android:textColor="@color/on_surface_variant" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumSm"
+                                android:text="100 bars"
+                                android:textColor="@color/on_surface"
+                                android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_r2_container"
+                            android:padding="6dp"
+                            android:layout_marginEnd="0dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="Min R:R"
+                                android:textColor="@color/on_surface_variant" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumSm"
+                                android:text="1 : 2.0"
+                                android:textColor="@color/tertiary"
+                                android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_r8_signal"
+                android:layout_marginTop="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="top">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_weight="1">
+                            <FrameLayout
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/bg_r4_surface_high">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_s_feed"
+                                    android:tint="@color/secondary"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginStart="4dp"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.HeadlineSm"
+                                    android:text="News Filter Agent"
+                                    android:textColor="@color/on_surface"
+                                    android:singleLine="true"
+                                    android:ellipsize="end" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.LabelCaps"
+                                    android:text="Event Guard &amp; Blackout"
+                                    android:textColor="@color/secondary"
+                                    android:letterSpacing="0.05" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switch_news"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:minWidth="0dp"
+                            app:thumb="@drawable/sw_thumb"
+                            app:track="@drawable/sw_track"
+                            app:showText="false"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_r4_container"
+                        android:padding="8dp"
+                        android:layout_marginTop="8dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.LabelCaps"
+                            android:text="Engine Model"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_weight="1" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/bg_r2_high"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp">
+                            <View
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:background="@drawable/bg_dot_tertiary"
+                                android:layout_marginEnd="6dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumSm"
+                                android:text="Gemini 1.5 Flash"
+                                android:textColor="@color/primary" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumSm"
+                                android:text="(85ms)"
+                                android:textColor="@color/on_surface_variant"
+                                android:textSize="10sp"
+                                android:layout_marginStart="6dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_r4_lowest"
+                        android:padding="10dp"
+                        android:layout_marginTop="8dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="System Prompt Runtime"
+                                android:textColor="@color/on_surface_variant"
+                                android:layout_weight="1" />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:clickable="true"
+                                android:focusable="true">
+                                <ImageView
+                                    android:layout_width="13dp"
+                                    android:layout_height="13dp"
+                                    android:src="@drawable/ic_s_edit_note"
+                                    android:tint="@color/primary" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.LabelCaps"
+                                    android:text="Quick Edit"
+                                    android:textColor="@color/primary"
+                                    android:layout_marginStart="2dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.BodySm"
+                            android:text="&quot;Parse ForexFactory &amp; economic calendar feeds. Flag High Impact events (NFP, CPI, FOMC, Rate Decisions)...&quot;"
+                            android:textColor="@color/on_surface_variant"
+                            android:fontFamily="monospace"
+                            android:textStyle="italic"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:lineSpacingExtra="2dp"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_r2_container"
+                        android:padding="8dp"
+                        android:layout_marginTop="8dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.LabelCaps"
+                            android:text="Impact Volatility Buffer"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_weight="1" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="8dp">
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_s_timer"
+                                android:tint="@color/error" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumSm"
+                                android:text="±45 Menit Before/After"
+                                android:textColor="@color/primary"
+                                android:layout_marginStart="4dp"
+                                android:gravity="end"
+                                android:maxWidth="110dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_r8_signal"
+                android:layout_marginTop="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="top">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_weight="1">
+                            <FrameLayout
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/bg_r4_surface_high">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_s_security"
+                                    android:tint="@color/primary"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginStart="4dp"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.HeadlineSm"
+                                    android:text="Risk Manager Agent"
+                                    android:textColor="@color/on_surface"
+                                    android:singleLine="true"
+                                    android:ellipsize="end" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.LabelCaps"
+                                    android:text="Capital Defense Engine"
+                                    android:textColor="@color/primary"
+                                    android:letterSpacing="0.05" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switch_risk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:minWidth="0dp"
+                            app:thumb="@drawable/sw_thumb"
+                            app:track="@drawable/sw_track"
+                            app:showText="false"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_r4_container"
+                        android:padding="8dp"
+                        android:layout_marginTop="8dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.LabelCaps"
+                            android:text="Engine Model"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_weight="1" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/bg_r2_high"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp">
+                            <View
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:background="@drawable/bg_dot_primary"
+                                android:layout_marginEnd="6dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumSm"
+                                android:text="GPT-4o (Strict Math)"
+                                android:textColor="@color/primary" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_r4_lowest"
+                        android:padding="10dp"
+                        android:layout_marginTop="8dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="System Prompt Runtime"
+                                android:textColor="@color/on_surface_variant"
+                                android:layout_weight="1" />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:clickable="true"
+                                android:focusable="true">
+                                <ImageView
+                                    android:layout_width="13dp"
+                                    android:layout_height="13dp"
+                                    android:src="@drawable/ic_s_edit_note"
+                                    android:tint="@color/primary" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.LabelCaps"
+                                    android:text="Quick Edit"
+                                    android:textColor="@color/primary"
+                                    android:layout_marginStart="2dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.BodySm"
+                            android:text="&quot;Calculate position size strictly: 1% risk per trade. Set SL at invalidation level and TP at minimum 2x Risk...&quot;"
+                            android:textColor="@color/on_surface_variant"
+                            android:fontFamily="monospace"
+                            android:textStyle="italic"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:lineSpacingExtra="2dp"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="top"
+                        android:layout_marginTop="12dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_r2_container"
+                            android:padding="6dp"
+                            android:layout_marginEnd="6dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="Max Risk/Pos"
+                                android:textColor="@color/on_surface_variant" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumSm"
+                                android:text="1.0% Eq"
+                                android:textColor="@color/error"
+                                android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_r2_container"
+                            android:padding="6dp"
+                            android:layout_marginEnd="6dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="Daily Max DD"
+                                android:textColor="@color/on_surface_variant" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumSm"
+                                android:text="3.0% Hard"
+                                android:textColor="@color/error"
+                                android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_r2_container"
+                            android:padding="6dp"
+                            android:layout_marginEnd="0dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="Kelly Stake"
+                                android:textColor="@color/on_surface_variant" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumSm"
+                                android:text="Half Kelly"
+                                android:textColor="@color/tertiary"
+                                android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_r8_signal"
+                android:layout_marginTop="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="top">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_weight="1">
+                            <FrameLayout
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/bg_r4_surface_high">
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_s_gavel"
+                                    android:tint="@color/primary"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginStart="4dp"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.HeadlineSm"
+                                    android:text="Supervisor Agent"
+                                    android:textColor="@color/on_surface"
+                                    android:singleLine="true"
+                                    android:ellipsize="end" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.LabelCaps"
+                                    android:text="Executive Final Consensus"
+                                    android:textColor="@color/primary"
+                                    android:letterSpacing="0.05" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switch_supervisor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:minWidth="0dp"
+                            app:thumb="@drawable/sw_thumb"
+                            app:track="@drawable/sw_track"
+                            app:showText="false"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_r4_container"
+                        android:padding="8dp"
+                        android:layout_marginTop="8dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.LabelCaps"
+                            android:text="Engine Model"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_weight="1" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/bg_r2_high"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp">
+                            <View
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:background="@drawable/bg_dot_tertiary"
+                                android:layout_marginEnd="6dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.NumSm"
+                                android:text="Claude 3.5 Sonnet"
+                                android:textColor="@color/primary" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_r4_lowest"
+                        android:padding="10dp"
+                        android:layout_marginTop="8dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="System Prompt Runtime"
+                                android:textColor="@color/on_surface_variant"
+                                android:layout_weight="1" />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:clickable="true"
+                                android:focusable="true">
+                                <ImageView
+                                    android:layout_width="13dp"
+                                    android:layout_height="13dp"
+                                    android:src="@drawable/ic_s_edit_note"
+                                    android:tint="@color/primary" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Zt.LabelCaps"
+                                    android:text="Quick Edit"
+                                    android:textColor="@color/primary"
+                                    android:layout_marginStart="2dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.BodySm"
+                            android:text="&quot;Review inputs from Technical, News, and Risk agents. Require minimum 3/3 consensus before placing order to MetaTrader 5/Broker REST API...&quot;"
+                            android:textColor="@color/on_surface_variant"
+                            android:fontFamily="monospace"
+                            android:textStyle="italic"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:lineSpacingExtra="2dp"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_r2_container"
+                        android:padding="8dp"
+                        android:layout_marginTop="8dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.LabelCaps"
+                            android:text="Outbound Gateway"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="MetaTrader 5 REST (MT5 Bridge)"
+                            android:textColor="@color/tertiary"
+                            android:gravity="end"
+                            android:maxWidth="150dp"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp"
+            android:paddingTop="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_s_account_tree"
+                        android:tint="@color/primary" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.HeadlineMd"
+                        android:text="Strategy Library"
+                        android:textColor="@color/on_surface"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Zt.LabelCaps"
+                    android:text="Autonomous Mode"
+                    android:textColor="@color/primary" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_r8_signal"
+                android:padding="16dp"
+                android:layout_marginTop="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_r2_tertiary10"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp">
+                        <View
+                            android:layout_width="6dp"
+                            android:layout_height="6dp"
+                            android:background="@drawable/bg_dot_tertiary"
+                            android:id="@+id/dot_deployed"
+                            android:layout_marginEnd="6dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.LabelCaps"
+                            android:text="Current Deployed"
+                            android:textColor="@color/tertiary" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.NumSm"
+                        android:text="Sharpe: 2.38"
+                        android:textColor="@color/primary" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Zt.HeadlineSm"
+                    android:text="Multi-Timeframe (MTF) Support &amp; Resistance Bounce"
+                    android:textColor="@color/on_surface"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Zt.BodySm"
+                    android:text="Confluence trading leveraging H1 macro levels with M5 confirmation candles and strict volatility filtering."
+                    android:textColor="@color/on_surface_variant"
+                    android:layout_marginTop="4dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.NumSm"
+                        android:text="Winrate: 68.4% (142 Trades)"
+                        android:textColor="@color/on_surface_variant"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.LabelCaps"
+                        android:text="Config Rules"
+                        android:textColor="@color/primary"
+                        android:id="@+id/btn_config_rules"
+                        android:background="@drawable/bg_r2_high"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Zt.LabelCaps"
+                    android:text="Standby Algorithmic Modules"
+                    android:textColor="@color/on_surface_variant" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_r4_container"
+                    android:padding="8dp"
+                    android:layout_marginTop="4dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.HeadlineSm"
+                            android:text="SMC Liquidity Sweep &amp; Breakout"
+                            android:textColor="@color/on_surface"
+                            android:singleLine="true"
+                            android:ellipsize="end" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="Asia Range Sweep + FVG Entry | Sharpe: 2.12"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.LabelCaps"
+                        android:text="Switch"
+                        android:textColor="@color/on_surface_variant"
+                        android:id="@+id/btn_switch_smc"
+                        android:background="@drawable/bg_r2_highest"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_r4_container"
+                    android:padding="8dp"
+                    android:layout_marginTop="4dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.HeadlineSm"
+                            android:text="London Open Trend Following"
+                            android:textColor="@color/on_surface"
+                            android:singleLine="true"
+                            android:ellipsize="end" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="08:00 UTC Breakout + EMA Stack | Sharpe: 1.89"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.LabelCaps"
+                        android:text="Switch"
+                        android:textColor="@color/on_surface_variant"
+                        android:id="@+id/btn_switch_london"
+                        android:background="@drawable/bg_r2_highest"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_r8_signal"
+                android:padding="16dp"
+                android:layout_marginTop="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.LabelCaps"
+                        android:text="Conflict Resolution Protocol"
+                        android:textColor="@color/primary"
+                        android:letterSpacing="0.1"
+                        android:layout_weight="1" />
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_s_balance"
+                        android:tint="@color/primary" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_r4_surface_high"
+                    android:padding="8dp"
+                    android:layout_marginTop="8dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+                        <FrameLayout
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:background="@drawable/bg_oval_primary">
+                            <View
+                                android:layout_width="6dp"
+                                android:layout_height="6dp"
+                                android:background="@drawable/bg_oval_on_primary"
+                                android:layout_gravity="center" />
+                        </FrameLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="4dp"
+                            android:layout_weight="1">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.HeadlineSm"
+                                android:text="Strict Unanimous (All 4 must agree)"
+                                android:textColor="@color/primary"
+                                android:singleLine="true"
+                                android:ellipsize="end" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.BodySm"
+                                android:text="Zero tolerance for divergent agent signals"
+                                android:textColor="@color/on_surface_variant" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.LabelCaps"
+                        android:text="Active"
+                        android:textColor="@color/tertiary"
+                        android:background="@drawable/bg_r2_tertiary10"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_r4_container"
+                    android:padding="8dp"
+                    android:layout_marginTop="8dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+                        <View
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:background="@drawable/bg_oval_highest" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="4dp"
+                            android:layout_weight="1">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.HeadlineSm"
+                                android:text="Majority Rule (3/4 with Risk Veto)"
+                                android:textColor="@color/on_surface"
+                                android:singleLine="true"
+                                android:ellipsize="end" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.BodySm"
+                                android:text="Permits 1 dissenting analytical node"
+                                android:textColor="@color/on_surface_variant" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.LabelCaps"
+                        android:text="Standby"
+                        android:textColor="@color/on_surface_variant"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_r4_container"
+                    android:padding="8dp"
+                    android:layout_marginTop="8dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+                        <FrameLayout
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:background="@drawable/bg_oval_primary20">
+                            <View
+                                android:layout_width="6dp"
+                                android:layout_height="6dp"
+                                android:background="@drawable/bg_oval_primary"
+                                android:layout_gravity="center" />
+                        </FrameLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="4dp"
+                            android:layout_weight="1">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.HeadlineSm"
+                                android:text="Risk Manager Absolute Veto"
+                                android:textColor="@color/on_surface"
+                                android:singleLine="true"
+                                android:ellipsize="end" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.BodySm"
+                                android:text="Overrides technical buy/sell orders unconditionally"
+                                android:textColor="@color/on_surface_variant" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.LabelCaps"
+                        android:text="Enforced"
+                        android:textColor="@color/primary"
+                        android:background="@drawable/bg_r2_primary10"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

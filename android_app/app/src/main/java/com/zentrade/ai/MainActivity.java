@@ -8,6 +8,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import com.zentrade.ai.ui.agents.AgentsFragment;
 import com.zentrade.ai.ui.home.HomeFragment;
 import com.zentrade.ai.ui.nav.BottomNavBar;
 import com.zentrade.ai.ui.trading.TradingFragment;
@@ -53,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case BottomNavBar.TRADING:
                     fragment = new TradingFragment();
+                    break;
+                case BottomNavBar.AGENTS:
+                    fragment = new AgentsFragment();
                     break;
                 default:
                     // Placeholder untuk tab lain
