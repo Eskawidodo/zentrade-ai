@@ -219,58 +219,7 @@
             </LinearLayout>
 
             <Space android:layout_width="match_parent" android:layout_height="16dp" />
-            <!-- Agent State Filter Chips -->
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scrollbars="none">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingBottom="4dp">
-                    
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ALL STATIONS (4)"
-                        android:textColor="@color/on_primary"
-                        android:background="@drawable/bg_chip_selected"
-                        android:paddingHorizontal="12dp"
-                        android:paddingVertical="6dp"
-                        android:textSize="11sp"
-                        android:textStyle="bold"
-                        android:layout_marginEnd="8dp" />
-                        
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="SCANNING"
-                        android:textColor="@color/on_surface_variant"
-                        android:background="@drawable/bg_chip_unselected"
-                        android:paddingHorizontal="12dp"
-                        android:paddingVertical="6dp"
-                        android:textSize="11sp"
-                        android:textStyle="bold"
-                        android:layout_marginEnd="8dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="NEWS FILTER"
-                        android:textColor="@color/on_surface_variant"
-                        android:background="@drawable/bg_chip_unselected"
-                        android:paddingHorizontal="12dp"
-                        android:paddingVertical="6dp"
-                        android:textSize="11sp"
-                        android:textStyle="bold"
-                        android:layout_marginEnd="8dp" />
-                </LinearLayout>
-            </HorizontalScrollView>
-
-            <Space android:layout_width="match_parent" android:layout_height="16dp" />
-
-            <!-- Agent Virtual Workspace 2D Visualizer Canvas -->
+<!-- Agent Virtual Workspace 2D Visualizer Canvas -->
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -330,22 +279,24 @@
                         android:textColor="@color/on_surface_variant"
                         android:textSize="10sp" />
 
-                    <!-- Pods Container -->
-                    <LinearLayout
+                    <!-- Baris chip agent (dibuat dinamis di HomeFragment) -->
+                    <HorizontalScrollView
+                        android:id="@+id/chip_scroll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="16dp">
-                        
-                        <!-- AGENT 1: Supervisor -->
-                        <include layout="@layout/item_agent_supervisor" />
-                        
-                        <Space android:layout_width="match_parent" android:layout_height="16dp" />
-                        
-                        <!-- AGENT 2: Technical -->
-                        <include layout="@layout/item_agent_technical" />
+                        android:scrollbars="none"
+                        android:clipToPadding="false"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="12dp">
 
-                    </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/chip_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" />
+                    </HorizontalScrollView>
                 </LinearLayout>
             </FrameLayout>
             

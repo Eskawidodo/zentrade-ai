@@ -77,6 +77,25 @@ public class OfficeView extends View {
         float chatTime;
         float chatDur;
         int lastSlot = -1;
+        // info tambahan untuk chip + panel detail (sementara data contoh)
+        String task = "";
+        String workStatus = "Working";
+        String workLine;
+        int confidence = 50;
+        String lastDecision = "-";
+        float statusTimer = 2f;
+    }
+
+    /** Ringkasan agent untuk UI di luar kanvas (chip, panel detail). */
+    public static class AgentInfo {
+        public String name;
+        public String role;
+        public String status;
+        public String task;
+        public String lastDecision;
+        public int color;
+        public int confidence;
+        public boolean speaking;
     }
 
     private final List<Agent> agents = new ArrayList<>();
@@ -114,20 +133,41 @@ public class OfficeView extends View {
     private void init() {
         // 4 agent default
         addAgent("Atlas", "TA", Color.parseColor("#E9C176"), new String[]{
-                "EURUSD tahan support H1", "RSI mulai divergen", "Ada order block di M15", "Trend H4 masih bullish"});
+                "EURUSD tahan support H1", "RSI mulai divergen", "Ada order block di M15", "Trend H4 masih bullish"},
+                "Analisis teknikal: struktur harga, support/resistance, dan indikator.",
+                "Analyzing", "Menganalisa EURUSD H1", 78, "Bias bullish EURUSD (H4)");
         addAgent("Nova", "NEWS", Color.parseColor("#7FB2FF"), new String[]{
-                "NFP rilis jam 19:30", "Berita ECB agak hawkish", "Hati-hati spread melebar", "CPI USD naik tipis"});
+                "NFP rilis jam 19:30", "Berita ECB agak hawkish", "Hati-hati spread melebar", "CPI USD naik tipis"},
+                "Memantau berita ekonomi dan kalender high-impact.",
+                "Monitoring", "Memantau berita USD", 64, "Impact tinggi: NFP 19:30 WIB");
         addAgent("Guard", "RISK", Color.parseColor("#FFB4AB"), new String[]{
-                "Drawdown aman 1.2%", "Margin level sehat", "Risk per trade 1%", "Exposure masih rendah"});
+                "Drawdown aman 1.2%", "Margin level sehat", "Risk per trade 1%", "Exposure masih rendah"},
+                "Mengawasi drawdown, margin, dan batas risiko harian.",
+                "Guarding", "Drawdown 1.2% - aman", 92, "Drawdown 1.2% dari batas 5%");
         addAgent("Exec", "EXEC", Color.parseColor("#58E7AA"), new String[]{
-                "Order siap dieksekusi", "Latency 14 ms, aman", "Broker sinkron", "Slippage minimal"});
+                "Order siap dieksekusi", "Latency 14 ms, aman", "Broker sinkron", "Slippage minimal"},
+                "Mengeksekusi order setelah semua agent menyetujui.",
+                "Ready", "Menunggu sinyal", 85, "Belum ada order hari ini");
     }
 
     // ---------- API publik ----------
 
     /** Tambah agent baru (meja otomatis diatur ulang). */
     public void addAgent(String name, String roleLabel, int color, String[] chatLines) {
+        addAgent(name, roleLabel, color, chatLines, "", "Working", null, 50, "-");
+    }
+
+    /** Tambah agent lengkap dengan info untuk chip dan panel detail. */
+    public void addAgent(String name, String roleLabel, int color, String[] chatLines,
+                         String task, String workStatus, String workLine,
+                         int confidence, String lastDecision) {
         Agent a = new Agent();
+        a.task = task;
+        a.workStatus = workStatus;
+        a.workLine = workLine;
+        a.confidence = confidence;
+        a.lastDecision = lastDecision;
+        a.statusTimer = 1f + rnd.nextFloat() * 3f;
         a.name = name;
         a.role = roleLabel;
         a.color = color;
@@ -160,6 +200,27 @@ public class OfficeView extends View {
 
     public int getAgentCount() { return agents.size(); }
 
+    /** Info agent untuk chip / panel detail. Aman dipanggil dari main thread. */
+    public AgentInfo getAgentInfo(int i) {
+        if (i < 0 || i >= agents.size()) return null;
+        Agent a = agents.get(i);
+        AgentInfo in = new AgentInfo();
+        in.name = a.name;
+        in.role = a.role;
+        in.color = a.color;
+        in.task = a.task;
+        in.confidence = a.confidence;
+        in.lastDecision = a.lastDecision;
+        in.speaking = a.bubble != null;
+        switch (a.state) {
+            case WORK: in.status = setupActive ? a.workStatus : "Standby"; break;
+            case WALK: in.status = "Walking"; break;
+            case BREW: in.status = "Coffee"; break;
+            default: in.status = "Chatting"; break;
+        }
+        return in;
+    }
+
     /** true = ada setup trading, semua agent fokus di meja. */
     public void setTradeSetupActive(boolean active) {
         if (setupActive == active) return;
@@ -172,6 +233,7 @@ public class OfficeView extends View {
                     sendToDesk(a);
                 }
                 a.workTimer = 3f;
+                a.statusTimer = 3.5f + rnd.nextFloat() * 3f;
             }
             Agent exec = agents.isEmpty() ? null : agents.get(agents.size() - 1);
             if (exec != null) say(exec, "Setup masuk!", 3f);
@@ -240,6 +302,13 @@ public class OfficeView extends View {
             case WORK:
                 a.facingUp = true;
                 a.workTimer -= dt;
+                if (setupActive && a.workLine != null) {
+                    a.statusTimer -= dt;
+                    if (a.statusTimer <= 0f && a.bubble == null) {
+                        say(a, a.workLine, 2.8f);
+                        a.statusTimer = 7f + rnd.nextFloat() * 4f;
+                    }
+                }
                 if (a.workTimer <= 0f) {
                     if (setupActive) a.workTimer = 3f; else decideIdle(a);
                 }
