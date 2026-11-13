@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Zt.LabelCaps" parent="">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/on_surface_variant</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="Zt.NumSm" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="Zt.NumMd" parent="">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="Zt.NumLg" parent="">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="Zt.HeadlineSm" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="Zt.HeadlineMd" parent="">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="Zt.HeadlineLg" parent="">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="Zt.BodySm" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+</resources>

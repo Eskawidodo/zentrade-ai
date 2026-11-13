@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.zentrade.ai.ui.home.HomeFragment;
+import com.zentrade.ai.ui.trading.TradingFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
                     Fragment selectedFragment;
                     if (item.getItemId() == R.id.navigation_home) {
                         selectedFragment = new HomeFragment();
+                    } else if (item.getItemId() == R.id.navigation_trading) {
+                        selectedFragment = new TradingFragment();
                     } else {
                         // Placeholder untuk tab lain
                         selectedFragment = new Fragment();
