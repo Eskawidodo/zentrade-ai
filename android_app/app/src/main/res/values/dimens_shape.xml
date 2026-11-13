@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        ATURAN LENGKUNGAN (mengikuti desain halaman Trading).
+        Semua kartu, kotak, tombol, dan chip di SEMUA halaman wajib memakai nilai di bawah ini
+        (jangan menulis angka dp langsung di drawable, layout, atau kode).
+
+        radius_card   : kartu besar / container utama (kartu akun, kartu posisi, kartu sinyal, canvas)
+        radius_box    : kotak di dalam kartu, baris, tab, badge/tag, kotak ikon
+        radius_button : semua tombol (Edit SL/TP, Close Position, tombol aksi cepat, dsb.)
+        radius_pill   : chip / pill status berbentuk kapsul (VPS, REALTIME, +7.22%, chip agent)
+    -->
+    <dimen name="radius_card">8dp</dimen>
+    <dimen name="radius_box">4dp</dimen>
+    <dimen name="radius_button">2dp</dimen>
+    <dimen name="radius_pill">12dp</dimen>
+</resources>

@@ -109,7 +109,7 @@ public class HomeFragment extends Fragment {
             root.setLayoutParams(lp);
 
             GradientDrawable bg = new GradientDrawable();
-            bg.setCornerRadius(dp(20));
+            bg.setCornerRadius(getResources().getDimension(R.dimen.radius_pill));
             root.setBackground(bg);
 
             View dot = new View(requireContext());
@@ -202,7 +202,7 @@ public class HomeFragment extends Fragment {
         st.setText(info.status.toUpperCase());
         st.setTextColor(info.color);
         GradientDrawable stBg = new GradientDrawable();
-        stBg.setCornerRadius(dp(12));
+        stBg.setCornerRadius(getResources().getDimension(R.dimen.radius_pill));
         stBg.setColor(Color.argb(40, Color.red(info.color), Color.green(info.color), Color.blue(info.color)));
         st.setBackground(stBg);
 

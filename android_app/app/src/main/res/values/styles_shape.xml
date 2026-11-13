@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tombol Material bawaan dengan lengkungan sesuai aturan (radius_button). -->
+    <style name="Zt.Button" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">@dimen/radius_button</item>
+    </style>
+</resources>

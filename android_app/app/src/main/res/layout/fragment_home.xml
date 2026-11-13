@@ -322,7 +322,7 @@
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:paddingVertical="12dp"
-                app:cornerRadius="12dp" />
+                app:cornerRadius="@dimen/radius_button" />
     
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

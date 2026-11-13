@@ -3,13 +3,13 @@
     <item>
         <shape>
             <solid android:color="#E61F1F23" />
-            <corners android:radius="8dp" />
+            <corners android:radius="@dimen/radius_card" />
         </shape>
     </item>
     <item>
         <shape>
             <gradient android:angle="45" android:startColor="#1AD4AF37" android:centerColor="#00000000" android:endColor="#0DF2CA50" />
-            <corners android:radius="8dp" />
+            <corners android:radius="@dimen/radius_card" />
         </shape>
     </item>
 </layer-list>
