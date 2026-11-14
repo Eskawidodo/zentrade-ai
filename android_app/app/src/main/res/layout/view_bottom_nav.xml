@@ -13,7 +13,7 @@
     <FrameLayout
         android:id="@+id/nav_home"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="56dp"
         android:layout_weight="1"
         android:clickable="true"
         android:focusable="true"
@@ -27,8 +27,8 @@
 
             <ImageView
                 android:id="@+id/nav_home_icon"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/ic_nav_hq"
                 android:tint="@color/on_surface_variant" />
 
@@ -36,13 +36,14 @@
                 android:id="@+id/nav_home_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="4dp"
+                android:maxLines="1"
                 android:text="HQ"
                 android:textColor="@color/on_surface_variant"
                 android:textSize="11sp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif"
-                android:letterSpacing="0.08"
+                android:letterSpacing="0.05"
                 android:includeFontPadding="false" />
         </LinearLayout>
 
@@ -51,7 +52,7 @@
             android:layout_width="4dp"
             android:layout_height="4dp"
             android:layout_gravity="bottom|center_horizontal"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/bg_dot_primary"
             android:visibility="invisible" />
     </FrameLayout>
@@ -59,7 +60,7 @@
     <FrameLayout
         android:id="@+id/nav_trading"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="56dp"
         android:layout_weight="1"
         android:clickable="true"
         android:focusable="true"
@@ -73,8 +74,8 @@
 
             <ImageView
                 android:id="@+id/nav_trading_icon"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/ic_nav_trading"
                 android:tint="@color/on_surface_variant" />
 
@@ -82,13 +83,14 @@
                 android:id="@+id/nav_trading_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="4dp"
+                android:maxLines="1"
                 android:text="Trading"
                 android:textColor="@color/on_surface_variant"
                 android:textSize="11sp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif"
-                android:letterSpacing="0.08"
+                android:letterSpacing="0.05"
                 android:includeFontPadding="false" />
         </LinearLayout>
 
@@ -97,7 +99,7 @@
             android:layout_width="4dp"
             android:layout_height="4dp"
             android:layout_gravity="bottom|center_horizontal"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/bg_dot_primary"
             android:visibility="invisible" />
     </FrameLayout>
@@ -105,7 +107,7 @@
     <FrameLayout
         android:id="@+id/nav_agents"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="56dp"
         android:layout_weight="1"
         android:clickable="true"
         android:focusable="true"
@@ -119,8 +121,8 @@
 
             <ImageView
                 android:id="@+id/nav_agents_icon"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/ic_nav_agents"
                 android:tint="@color/on_surface_variant" />
 
@@ -128,13 +130,14 @@
                 android:id="@+id/nav_agents_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="4dp"
+                android:maxLines="1"
                 android:text="Agents"
                 android:textColor="@color/on_surface_variant"
                 android:textSize="11sp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif"
-                android:letterSpacing="0.08"
+                android:letterSpacing="0.05"
                 android:includeFontPadding="false" />
         </LinearLayout>
 
@@ -143,7 +146,7 @@
             android:layout_width="4dp"
             android:layout_height="4dp"
             android:layout_gravity="bottom|center_horizontal"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/bg_dot_primary"
             android:visibility="invisible" />
     </FrameLayout>
@@ -151,7 +154,7 @@
     <FrameLayout
         android:id="@+id/nav_journal"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="56dp"
         android:layout_weight="1"
         android:clickable="true"
         android:focusable="true"
@@ -165,8 +168,8 @@
 
             <ImageView
                 android:id="@+id/nav_journal_icon"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/ic_nav_journal"
                 android:tint="@color/on_surface_variant" />
 
@@ -174,13 +177,14 @@
                 android:id="@+id/nav_journal_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="4dp"
+                android:maxLines="1"
                 android:text="Journal"
                 android:textColor="@color/on_surface_variant"
                 android:textSize="11sp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif"
-                android:letterSpacing="0.08"
+                android:letterSpacing="0.05"
                 android:includeFontPadding="false" />
         </LinearLayout>
 
@@ -189,7 +193,7 @@
             android:layout_width="4dp"
             android:layout_height="4dp"
             android:layout_gravity="bottom|center_horizontal"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/bg_dot_primary"
             android:visibility="invisible" />
     </FrameLayout>
@@ -197,7 +201,7 @@
     <FrameLayout
         android:id="@+id/nav_settings"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="56dp"
         android:layout_weight="1"
         android:clickable="true"
         android:focusable="true"
@@ -211,8 +215,8 @@
 
             <ImageView
                 android:id="@+id/nav_settings_icon"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/ic_nav_settings"
                 android:tint="@color/on_surface_variant" />
 
@@ -220,13 +224,14 @@
                 android:id="@+id/nav_settings_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="4dp"
+                android:maxLines="1"
                 android:text="Settings"
                 android:textColor="@color/on_surface_variant"
                 android:textSize="11sp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif"
-                android:letterSpacing="0.08"
+                android:letterSpacing="0.05"
                 android:includeFontPadding="false" />
         </LinearLayout>
 
@@ -235,7 +240,7 @@
             android:layout_width="4dp"
             android:layout_height="4dp"
             android:layout_gravity="bottom|center_horizontal"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/bg_dot_primary"
             android:visibility="invisible" />
     </FrameLayout>

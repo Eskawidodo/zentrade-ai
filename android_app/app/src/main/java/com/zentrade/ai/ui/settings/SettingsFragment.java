@@ -1,7 +1,5 @@
 package com.zentrade.ai.ui.settings;
 
-import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
@@ -26,8 +24,6 @@ import java.util.Locale;
  * penyimpanan sungguhan sebaiknya memakai penyimpanan terenkripsi (Android Keystore).
  */
 public class SettingsFragment extends Fragment {
-
-    private ObjectAnimator armedPulse;
 
     @Nullable
     @Override
@@ -73,16 +69,6 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onStopTrackingTouch(SeekBar s) { }
         });
-
-        // Titik "ARMED & SYNCED" berdenyut
-        View dot = v.findViewById(R.id.dot_armed);
-        if (dot != null) {
-            armedPulse = ObjectAnimator.ofFloat(dot, "alpha", 1f, 0.25f);
-            armedPulse.setDuration(900);
-            armedPulse.setRepeatMode(ValueAnimator.REVERSE);
-            armedPulse.setRepeatCount(ValueAnimator.INFINITE);
-            armedPulse.start();
-        }
     }
 
     private void setupSecretToggle(View root, int editId, int toggleId) {
@@ -123,12 +109,5 @@ public class SettingsFragment extends Fragment {
             t.setTextColor(on ? onPrimary : muted);
             t.setTypeface(t.getTypeface(), on ? Typeface.BOLD : Typeface.NORMAL);
         }
-    }
-
-    @Override
-    public void onDestroyView() {
-        if (armedPulse != null) armedPulse.cancel();
-        armedPulse = null;
-        super.onDestroyView();
     }
 }
