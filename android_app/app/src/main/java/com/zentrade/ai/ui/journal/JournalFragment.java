@@ -92,7 +92,6 @@ public class JournalFragment extends Fragment {
                         + hl(C_PRIMARY, "&lt; 1.8 pips", false) + ") before order dispatch."));
 
         // Denyut (animate-ping / animate-pulse pada desain)
-        pulse(v.findViewById(R.id.dot_stream), 0.25f, 900);
         pulse(v.findViewById(R.id.dot_live), 0.3f, 1000);
         pulse(v.findViewById(R.id.tv_awaiting), 0.4f, 1000);
     }
@@ -149,46 +148,48 @@ public class JournalFragment extends Fragment {
                         String action, String actionColor, boolean actionPulse, String htmlMsg, boolean highlight) {
         LinearLayout item = new LinearLayout(requireContext());
         item.setOrientation(LinearLayout.VERTICAL);
-        item.setPadding(dp(8), dp(8), dp(8), dp(8));
+        item.setPadding(dp(10), dp(10), dp(10), dp(10));
         item.setBackgroundResource(highlight ? R.drawable.bg_r2_high : R.drawable.bg_r2_low);
         LinearLayout.LayoutParams ilp = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         if (feed.getChildCount() > 0) ilp.topMargin = dp(10);
         item.setLayoutParams(ilp);
 
-        LinearLayout head = new LinearLayout(requireContext());
-        head.setOrientation(LinearLayout.HORIZONTAL);
-        head.setGravity(Gravity.CENTER_VERTICAL);
+        // Kiri: [jam] [tag]   |   Kanan: aksi. Kalau tidak muat, aksi turun ke baris bawah.
+        LinearLayout left = new LinearLayout(requireContext());
+        left.setOrientation(LinearLayout.HORIZONTAL);
+        left.setGravity(Gravity.CENTER_VERTICAL);
 
-        TextView t = numSm("[" + time + "]", C_MUTED);
-        head.addView(t);
+        left.addView(numSm("[" + time + "]", C_MUTED));
 
         TextView tg = numSm(tag, tagFilled ? "#3C2F00" : tagColor);
-        tg.setTypeface(android.graphics.Typeface.MONOSPACE, android.graphics.Typeface.BOLD);
-        tg.setPadding(dp(6), dp(1), dp(6), dp(1));
+        tg.setTypeface(android.graphics.Typeface.MONOSPACE,
+                tagFilled ? android.graphics.Typeface.BOLD : android.graphics.Typeface.NORMAL);
+        tg.setPadding(dp(6), dp(2), dp(6), dp(2));
         tg.setBackgroundResource(tagFilled ? R.drawable.bg_r2_primary : R.drawable.bg_r2_highest);
         LinearLayout.LayoutParams tlp = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        tlp.setMarginStart(dp(8));
-        head.addView(tg, tlp);
+        tlp.setMarginStart(dp(6));
+        left.addView(tg, tlp);
 
         TextView ac = numSm(action, actionColor);
-        LinearLayout.LayoutParams alp = new LinearLayout.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        alp.setMarginStart(dp(8));
-        head.addView(ac, alp);
         if (actionPulse) pulse(ac, 0.4f, 1000);
 
+        WrapHeaderLayout head = new WrapHeaderLayout(requireContext());
+        head.addView(left);
+        head.addView(ac);
         item.addView(head, new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 
         TextView msg = numSm("", "#E3E2E6");
+        msg.setIncludeFontPadding(true);
+        msg.setTextSize(12f);
         msg.setText(html(htmlMsg));
-        msg.setLineSpacing(dp(4), 1f);
+        msg.setLineSpacing(dp(5), 1f);
         msg.setPadding(dp(4), 0, 0, 0);
         LinearLayout.LayoutParams mlp = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        mlp.topMargin = dp(2);
+        mlp.topMargin = dp(6);
         item.addView(msg, mlp);
 
         feed.addView(item);
@@ -200,6 +201,7 @@ public class JournalFragment extends Fragment {
         TextView tv = new TextView(requireContext());
         TextViewCompat.setTextAppearance(tv, R.style.Zt_NumSm);
         tv.setIncludeFontPadding(false);
+        tv.setTextSize(11f);
         tv.setText(text);
         tv.setTextColor(Color.parseColor(color));
         return tv;

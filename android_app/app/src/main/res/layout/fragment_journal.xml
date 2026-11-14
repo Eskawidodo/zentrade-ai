@@ -39,91 +39,63 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:padding="16dp">
+                <FrameLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_r4_surface_high">
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_s_terminal"
+                        android:tint="@color/primary"
+                        android:layout_gravity="center" />
+                </FrameLayout>
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp"
                     android:layout_weight="1">
-                    <FrameLayout
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:background="@drawable/bg_r4_surface_high">
-                        <ImageView
-                            android:layout_width="22dp"
-                            android:layout_height="22dp"
-                            android:src="@drawable/ic_s_terminal"
-                            android:tint="@color/primary"
-                            android:layout_gravity="center" />
-                    </FrameLayout>
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginStart="8dp"
-                        android:layout_weight="1">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical">
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                style="@style/Zt.HeadlineSm"
-                                android:text="Cognitive Journal"
-                                android:textColor="@color/on_surface"
-                                android:layout_weight="1"
-                                android:singleLine="true"
-                                android:ellipsize="end" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                style="@style/Zt.LabelCaps"
-                                android:text="NODE 01"
-                                android:textColor="@color/primary"
-                                android:background="@drawable/bg_r2_highest"
-                                android:paddingStart="6dp"
-                                android:paddingEnd="6dp"
-                                android:paddingTop="2dp"
-                                android:paddingBottom="2dp"
-                                android:layout_marginStart="4dp"
-                                android:textAllCaps="false" />
-                        </LinearLayout>
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            style="@style/Zt.NumSm"
-                            android:text="SYNCED // VPS VECTOR DB v4.9.1"
-                            android:textColor="@color/on_surface_variant"
-                            android:layout_marginTop="2dp"
-                            android:singleLine="true"
-                            android:ellipsize="end" />
+                            style="@style/Zt.HeadlineSm"
+                            android:text="Cognitive Journal"
+                            android:lineSpacingExtra="4dp"
+                            android:textColor="@color/on_surface"
+                            android:textStyle="bold"
+                            android:singleLine="true" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.LabelCaps"
+                            android:text="NODE 01"
+                            android:lineSpacingExtra="2dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/bg_r2_highest"
+                            android:paddingStart="6dp"
+                            android:paddingEnd="6dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:layout_marginStart="8dp"
+                            android:textAllCaps="false" />
                     </LinearLayout>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:background="@drawable/bg_r2_container"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:paddingTop="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_marginStart="8dp">
-                    <View
-                        android:layout_width="8dp"
-                        android:layout_height="8dp"
-                        android:background="@drawable/bg_dot_tertiary"
-                        android:id="@+id/dot_stream"
-                        android:layout_marginEnd="6dp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/Zt.NumSm"
-                        android:text="14ms STREAM"
-                        android:textColor="@color/tertiary" />
+                        android:text="SYNCED // VPS VECTOR DB v4.9.1"
+                        android:lineSpacingExtra="3dp"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="11sp"
+                        android:layout_marginTop="4dp"
+                        android:singleLine="true"
+                        android:ellipsize="end" />
                 </LinearLayout>
             </LinearLayout>
         </FrameLayout>
@@ -142,17 +114,17 @@
                 android:gravity="center"
                 android:id="@+id/tab_logs"
                 android:layout_weight="1"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:paddingStart="4dp"
-                android:paddingEnd="4dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:background="@drawable/bg_r4_surface_high">
                 <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
                     android:src="@drawable/ic_s_stream"
                     android:tint="@color/primary"
                     android:id="@+id/tab_logs_icon" />
@@ -161,9 +133,11 @@
                     android:layout_height="wrap_content"
                     style="@style/Zt.LabelCaps"
                     android:text="Reasoning"
+                    android:lineSpacingExtra="2dp"
                     android:textColor="@color/primary"
                     android:id="@+id/tab_logs_label"
-                    android:layout_marginStart="6dp"
+                    android:textSize="10.5sp"
+                    android:layout_marginStart="4dp"
                     android:singleLine="true"
                     android:ellipsize="end"
                     android:textAllCaps="false" />
@@ -175,16 +149,16 @@
                 android:gravity="center"
                 android:id="@+id/tab_history"
                 android:layout_weight="1"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:paddingStart="4dp"
-                android:paddingEnd="4dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground">
                 <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
                     android:src="@drawable/ic_s_receipt"
                     android:tint="@color/on_surface_variant"
                     android:id="@+id/tab_history_icon" />
@@ -193,9 +167,11 @@
                     android:layout_height="wrap_content"
                     style="@style/Zt.LabelCaps"
                     android:text="Closed Trades"
+                    android:lineSpacingExtra="2dp"
                     android:textColor="@color/on_surface_variant"
                     android:id="@+id/tab_history_label"
-                    android:layout_marginStart="6dp"
+                    android:textSize="10.5sp"
+                    android:layout_marginStart="4dp"
                     android:singleLine="true"
                     android:ellipsize="end"
                     android:textAllCaps="false" />
@@ -207,16 +183,16 @@
                 android:gravity="center"
                 android:id="@+id/tab_memory"
                 android:layout_weight="1"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:paddingStart="4dp"
-                android:paddingEnd="4dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground">
                 <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
                     android:src="@drawable/ic_s_psychology"
                     android:tint="@color/on_surface_variant"
                     android:id="@+id/tab_memory_icon" />
@@ -225,9 +201,11 @@
                     android:layout_height="wrap_content"
                     style="@style/Zt.LabelCaps"
                     android:text="Memory Bank"
+                    android:lineSpacingExtra="2dp"
                     android:textColor="@color/on_surface_variant"
                     android:id="@+id/tab_memory_label"
-                    android:layout_marginStart="6dp"
+                    android:textSize="10.5sp"
+                    android:layout_marginStart="4dp"
                     android:singleLine="true"
                     android:ellipsize="end"
                     android:textAllCaps="false" />
@@ -247,29 +225,29 @@
                 android:paddingStart="4dp"
                 android:paddingEnd="4dp">
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:layout_weight="1">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/Zt.LabelCaps"
                         android:text="Live Agent Telemetry"
+                        android:lineSpacingExtra="2dp"
                         android:textColor="@color/on_surface_variant"
                         android:letterSpacing="0.05"
+                        android:singleLine="true"
+                        android:ellipsize="end"
                         android:textAllCaps="true" />
                     <View
                         android:layout_width="6dp"
                         android:layout_height="6dp"
                         android:background="@drawable/bg_dot_primary"
                         android:id="@+id/dot_live"
-                        android:layout_marginStart="8dp" />
+                        android:layout_marginStart="6dp" />
                 </LinearLayout>
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_weight="1" />
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -283,10 +261,11 @@
                     android:paddingBottom="2dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground">
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginStart="8dp">
                     <ImageView
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
                         android:src="@drawable/ic_s_refresh"
                         android:tint="@color/on_surface_variant" />
                     <TextView
@@ -294,7 +273,9 @@
                         android:layout_height="wrap_content"
                         style="@style/Zt.NumSm"
                         android:text="WIPE"
+                        android:lineSpacingExtra="3dp"
                         android:textColor="@color/on_surface_variant"
+                        android:textSize="11sp"
                         android:layout_marginStart="4dp" />
                 </LinearLayout>
                 <TextView
@@ -302,13 +283,15 @@
                     android:layout_height="wrap_content"
                     style="@style/Zt.NumSm"
                     android:text="AUTO-POLL: ON"
+                    android:lineSpacingExtra="3dp"
                     android:textColor="@color/on_surface_variant"
+                    android:textSize="11sp"
                     android:background="@drawable/bg_r2_container"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
                     android:paddingTop="2dp"
                     android:paddingBottom="2dp"
-                    android:layout_marginStart="4dp" />
+                    android:layout_marginStart="6dp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -347,8 +330,10 @@
                             android:layout_height="wrap_content"
                             style="@style/Zt.NumSm"
                             android:text="vps-mt5-bridge@ai-cluster:~$"
+                            android:lineSpacingExtra="3dp"
                             android:textColor="@color/on_surface_variant"
-                            android:layout_marginStart="8dp"
+                            android:textSize="11sp"
+                            android:layout_marginStart="4dp"
                             android:singleLine="true"
                             android:ellipsize="end" />
                     </LinearLayout>
@@ -359,8 +344,8 @@
                         android:gravity="center_vertical"
                         android:layout_marginStart="8dp">
                         <ImageView
-                            android:layout_width="14dp"
-                            android:layout_height="14dp"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
                             android:src="@drawable/ic_s_dns"
                             android:tint="@color/tertiary" />
                         <TextView
@@ -368,7 +353,9 @@
                             android:layout_height="wrap_content"
                             style="@style/Zt.NumSm"
                             android:text="TLS_v1.3"
+                            android:lineSpacingExtra="3dp"
                             android:textColor="@color/tertiary"
+                            android:textSize="11sp"
                             android:layout_marginStart="4dp" />
                     </LinearLayout>
                 </LinearLayout>
@@ -377,24 +364,26 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginTop="8dp" />
+                    android:layout_marginTop="12dp" />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="top"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="12dp">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/Zt.NumSm"
                         android:text="❯"
+                        android:lineSpacingExtra="3dp"
                         android:textColor="@color/primary" />
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         style="@style/Zt.NumSm"
                         android:text="Awaiting incoming M1 tick stream from MT5 Bridge..."
+                        android:lineSpacingExtra="3dp"
                         android:textColor="@color/on_surface_variant"
                         android:id="@+id/tv_awaiting"
                         android:layout_marginStart="8dp"
@@ -436,6 +425,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.LabelCaps"
                                 android:text="Win Rate"
+                                android:lineSpacingExtra="2dp"
                                 android:textColor="@color/on_surface_variant"
                                 android:layout_weight="1"
                                 android:textAllCaps="false" />
@@ -450,18 +440,20 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:gravity="bottom"
-                            android:layout_marginTop="4dp">
+                            android:layout_marginTop="6dp">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.NumLg"
                                 android:text="74.2%"
+                                android:lineSpacingExtra="3dp"
                                 android:textColor="@color/tertiary" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.NumSm"
                                 android:text="(23/31)"
+                                android:lineSpacingExtra="3dp"
                                 android:textColor="@color/on_surface_variant"
                                 android:layout_marginStart="6dp" />
                         </LinearLayout>
@@ -484,6 +476,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.LabelCaps"
                                 android:text="Profit Factor"
+                                android:lineSpacingExtra="2dp"
                                 android:textColor="@color/on_surface_variant"
                                 android:layout_weight="1"
                                 android:textAllCaps="false" />
@@ -498,18 +491,20 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:gravity="bottom"
-                            android:layout_marginTop="4dp">
+                            android:layout_marginTop="6dp">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.NumLg"
                                 android:text="2.84"
+                                android:lineSpacingExtra="3dp"
                                 android:textColor="@color/primary" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.NumSm"
                                 android:text="Prime"
+                                android:lineSpacingExtra="3dp"
                                 android:textColor="@color/tertiary"
                                 android:layout_marginStart="6dp" />
                         </LinearLayout>
@@ -539,6 +534,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.LabelCaps"
                                 android:text="Total Net PnL"
+                                android:lineSpacingExtra="2dp"
                                 android:textColor="@color/on_surface_variant"
                                 android:layout_weight="1"
                                 android:textAllCaps="false" />
@@ -553,12 +549,13 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:gravity="bottom"
-                            android:layout_marginTop="4dp">
+                            android:layout_marginTop="6dp">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.NumLg"
                                 android:text="+$8,420.50"
+                                android:lineSpacingExtra="3dp"
                                 android:textColor="@color/tertiary" />
                         </LinearLayout>
                     </LinearLayout>
@@ -580,6 +577,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.LabelCaps"
                                 android:text="Avg R:R Ratio"
+                                android:lineSpacingExtra="2dp"
                                 android:textColor="@color/on_surface_variant"
                                 android:layout_weight="1"
                                 android:textAllCaps="false" />
@@ -594,18 +592,20 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:gravity="bottom"
-                            android:layout_marginTop="4dp">
+                            android:layout_marginTop="6dp">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.NumLg"
                                 android:text="1:2.15"
+                                android:lineSpacingExtra="3dp"
                                 android:textColor="@color/secondary" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.NumSm"
                                 android:text="target"
+                                android:lineSpacingExtra="3dp"
                                 android:textColor="@color/on_surface_variant"
                                 android:layout_marginStart="6dp" />
                         </LinearLayout>
@@ -629,6 +629,7 @@
                         android:layout_height="wrap_content"
                         style="@style/Zt.LabelCaps"
                         android:text="Historical Executions"
+                        android:lineSpacingExtra="2dp"
                         android:textColor="@color/on_surface_variant"
                         android:letterSpacing="0.05"
                         android:layout_weight="1"
@@ -638,6 +639,7 @@
                         android:layout_height="wrap_content"
                         style="@style/Zt.NumSm"
                         android:text="SORT: NEWEST FIRST"
+                        android:lineSpacingExtra="3dp"
                         android:textColor="@color/on_surface_variant" />
                 </LinearLayout>
                 <LinearLayout
@@ -662,6 +664,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.HeadlineSm"
                                 android:text="EURUSD"
+                                android:lineSpacingExtra="4dp"
                                 android:textColor="@color/on_surface"
                                 android:textStyle="bold" />
                             <TextView
@@ -669,6 +672,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.LabelCaps"
                                 android:text="BUY 0.85 LOTS"
+                                android:lineSpacingExtra="2dp"
                                 android:textColor="@color/primary"
                                 android:background="@drawable/bg_r2_highest"
                                 android:paddingStart="8dp"
@@ -702,6 +706,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.LabelCaps"
                                 android:text="TP HIT"
+                                android:lineSpacingExtra="2dp"
                                 android:textColor="@color/tertiary"
                                 android:textStyle="bold"
                                 android:layout_marginStart="4dp"
@@ -713,9 +718,9 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="top"
-                        android:paddingTop="4dp"
-                        android:paddingBottom="4dp"
-                        android:layout_marginTop="4dp">
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:layout_marginTop="8dp">
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -726,6 +731,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.LabelCaps"
                                 android:text="EXECUTION RANGE"
+                                android:lineSpacingExtra="2dp"
                                 android:textColor="@color/on_surface_variant"
                                 android:textAllCaps="false" />
                             <LinearLayout
@@ -733,18 +739,20 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
                                 android:gravity="center_vertical"
-                                android:layout_marginTop="2dp">
+                                android:layout_marginTop="4dp">
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     style="@style/Zt.NumSm"
                                     android:text="1.08120"
+                                    android:lineSpacingExtra="3dp"
                                     android:textColor="@color/on_surface" />
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     style="@style/Zt.NumSm"
                                     android:text="→"
+                                    android:lineSpacingExtra="3dp"
                                     android:textColor="@color/on_surface_variant"
                                     android:layout_marginStart="4dp"
                                     android:layout_marginEnd="4dp" />
@@ -753,6 +761,7 @@
                                     android:layout_height="wrap_content"
                                     style="@style/Zt.NumSm"
                                     android:text="1.08540"
+                                    android:lineSpacingExtra="3dp"
                                     android:textColor="@color/on_surface" />
                             </LinearLayout>
                         </LinearLayout>
@@ -766,6 +775,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.LabelCaps"
                                 android:text="NET PROFIT"
+                                android:lineSpacingExtra="2dp"
                                 android:textColor="@color/on_surface_variant"
                                 android:textAllCaps="false" />
                             <TextView
@@ -773,8 +783,9 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.NumMd"
                                 android:text="+$357.00"
+                                android:lineSpacingExtra="3dp"
                                 android:textColor="@color/tertiary"
-                                android:layout_marginTop="2dp"
+                                android:layout_marginTop="4dp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
@@ -789,6 +800,7 @@
                             android:layout_height="wrap_content"
                             style="@style/Zt.NumSm"
                             android:text="Duration: 42m 18s"
+                            android:lineSpacingExtra="3dp"
                             android:textColor="@color/on_surface_variant"
                             android:layout_weight="1" />
                         <TextView
@@ -796,6 +808,7 @@
                             android:layout_height="wrap_content"
                             style="@style/Zt.NumSm"
                             android:text="Risk: $180.00 (1:1.98)"
+                            android:lineSpacingExtra="3dp"
                             android:textColor="@color/on_surface_variant" />
                     </LinearLayout>
                 </LinearLayout>
@@ -821,6 +834,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.HeadlineSm"
                                 android:text="XAUUSD"
+                                android:lineSpacingExtra="4dp"
                                 android:textColor="@color/on_surface"
                                 android:textStyle="bold" />
                             <TextView
@@ -828,6 +842,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.LabelCaps"
                                 android:text="BUY 0.50 LOTS"
+                                android:lineSpacingExtra="2dp"
                                 android:textColor="@color/primary"
                                 android:background="@drawable/bg_r2_highest"
                                 android:paddingStart="8dp"
@@ -861,6 +876,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.LabelCaps"
                                 android:text="TP HIT"
+                                android:lineSpacingExtra="2dp"
                                 android:textColor="@color/tertiary"
                                 android:textStyle="bold"
                                 android:layout_marginStart="4dp"
@@ -872,9 +888,9 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="top"
-                        android:paddingTop="4dp"
-                        android:paddingBottom="4dp"
-                        android:layout_marginTop="4dp">
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:layout_marginTop="8dp">
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -885,6 +901,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.LabelCaps"
                                 android:text="EXECUTION RANGE"
+                                android:lineSpacingExtra="2dp"
                                 android:textColor="@color/on_surface_variant"
                                 android:textAllCaps="false" />
                             <LinearLayout
@@ -892,18 +909,20 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
                                 android:gravity="center_vertical"
-                                android:layout_marginTop="2dp">
+                                android:layout_marginTop="4dp">
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     style="@style/Zt.NumSm"
                                     android:text="2,328.00"
+                                    android:lineSpacingExtra="3dp"
                                     android:textColor="@color/on_surface" />
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     style="@style/Zt.NumSm"
                                     android:text="→"
+                                    android:lineSpacingExtra="3dp"
                                     android:textColor="@color/on_surface_variant"
                                     android:layout_marginStart="4dp"
                                     android:layout_marginEnd="4dp" />
@@ -912,6 +931,7 @@
                                     android:layout_height="wrap_content"
                                     style="@style/Zt.NumSm"
                                     android:text="2,342.00"
+                                    android:lineSpacingExtra="3dp"
                                     android:textColor="@color/on_surface" />
                             </LinearLayout>
                         </LinearLayout>
@@ -925,6 +945,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.LabelCaps"
                                 android:text="NET PROFIT"
+                                android:lineSpacingExtra="2dp"
                                 android:textColor="@color/on_surface_variant"
                                 android:textAllCaps="false" />
                             <TextView
@@ -932,8 +953,9 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.NumMd"
                                 android:text="+$700.00"
+                                android:lineSpacingExtra="3dp"
                                 android:textColor="@color/tertiary"
-                                android:layout_marginTop="2dp"
+                                android:layout_marginTop="4dp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
@@ -948,6 +970,7 @@
                             android:layout_height="wrap_content"
                             style="@style/Zt.NumSm"
                             android:text="Duration: 1h 14m"
+                            android:lineSpacingExtra="3dp"
                             android:textColor="@color/on_surface_variant"
                             android:layout_weight="1" />
                         <TextView
@@ -955,6 +978,7 @@
                             android:layout_height="wrap_content"
                             style="@style/Zt.NumSm"
                             android:text="Risk: $250.00 (1:2.80)"
+                            android:lineSpacingExtra="3dp"
                             android:textColor="@color/on_surface_variant" />
                     </LinearLayout>
                 </LinearLayout>
@@ -980,6 +1004,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.HeadlineSm"
                                 android:text="GBPUSD"
+                                android:lineSpacingExtra="4dp"
                                 android:textColor="@color/on_surface"
                                 android:textStyle="bold" />
                             <TextView
@@ -987,6 +1012,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.LabelCaps"
                                 android:text="SELL 0.70 LOTS"
+                                android:lineSpacingExtra="2dp"
                                 android:textColor="@color/error"
                                 android:background="@drawable/bg_r2_highest"
                                 android:paddingStart="8dp"
@@ -1020,6 +1046,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.LabelCaps"
                                 android:text="SL HIT"
+                                android:lineSpacingExtra="2dp"
                                 android:textColor="@color/error"
                                 android:textStyle="bold"
                                 android:layout_marginStart="4dp"
@@ -1031,9 +1058,9 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="top"
-                        android:paddingTop="4dp"
-                        android:paddingBottom="4dp"
-                        android:layout_marginTop="4dp">
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:layout_marginTop="8dp">
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -1044,6 +1071,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.LabelCaps"
                                 android:text="EXECUTION RANGE"
+                                android:lineSpacingExtra="2dp"
                                 android:textColor="@color/on_surface_variant"
                                 android:textAllCaps="false" />
                             <LinearLayout
@@ -1051,18 +1079,20 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
                                 android:gravity="center_vertical"
-                                android:layout_marginTop="2dp">
+                                android:layout_marginTop="4dp">
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     style="@style/Zt.NumSm"
                                     android:text="1.27400"
+                                    android:lineSpacingExtra="3dp"
                                     android:textColor="@color/on_surface" />
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     style="@style/Zt.NumSm"
                                     android:text="→"
+                                    android:lineSpacingExtra="3dp"
                                     android:textColor="@color/on_surface_variant"
                                     android:layout_marginStart="4dp"
                                     android:layout_marginEnd="4dp" />
@@ -1071,6 +1101,7 @@
                                     android:layout_height="wrap_content"
                                     style="@style/Zt.NumSm"
                                     android:text="1.27620"
+                                    android:lineSpacingExtra="3dp"
                                     android:textColor="@color/on_surface" />
                             </LinearLayout>
                         </LinearLayout>
@@ -1084,6 +1115,7 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.LabelCaps"
                                 android:text="NET LOSS"
+                                android:lineSpacingExtra="2dp"
                                 android:textColor="@color/on_surface_variant"
                                 android:textAllCaps="false" />
                             <TextView
@@ -1091,8 +1123,9 @@
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.NumMd"
                                 android:text="-$154.00"
+                                android:lineSpacingExtra="3dp"
                                 android:textColor="@color/error"
-                                android:layout_marginTop="2dp"
+                                android:layout_marginTop="4dp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
@@ -1107,6 +1140,7 @@
                             android:layout_height="wrap_content"
                             style="@style/Zt.NumSm"
                             android:text="Duration: 18m 04s"
+                            android:lineSpacingExtra="3dp"
                             android:textColor="@color/on_surface_variant"
                             android:layout_weight="1" />
                         <TextView
@@ -1114,6 +1148,7 @@
                             android:layout_height="wrap_content"
                             style="@style/Zt.NumSm"
                             android:text="Safeguard Limit: 1.0%"
+                            android:lineSpacingExtra="3dp"
                             android:textColor="@color/on_surface_variant" />
                     </LinearLayout>
                 </LinearLayout>
@@ -1160,14 +1195,16 @@
                             android:layout_height="wrap_content"
                             style="@style/Zt.HeadlineSm"
                             android:text="Vector Embeddings"
+                            android:lineSpacingExtra="4dp"
                             android:textColor="@color/on_surface" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/Zt.NumSm"
                             android:text="1,492 HEURISTICS REFINED"
+                            android:lineSpacingExtra="3dp"
                             android:textColor="@color/on_surface_variant"
-                            android:layout_marginTop="2dp" />
+                            android:layout_marginTop="4dp" />
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
@@ -1195,6 +1232,7 @@
                         android:layout_height="wrap_content"
                         style="@style/Zt.LabelCaps"
                         android:text="RETRAIN"
+                        android:lineSpacingExtra="2dp"
                         android:textColor="@color/on_primary"
                         android:layout_marginStart="4dp"
                         android:textAllCaps="true" />
@@ -1222,6 +1260,7 @@
                             android:layout_height="wrap_content"
                             style="@style/Zt.NumSm"
                             android:text="LESSON #42"
+                            android:lineSpacingExtra="3dp"
                             android:textColor="@color/primary"
                             android:background="@drawable/bg_r2_highest"
                             android:paddingStart="8dp"
@@ -1234,6 +1273,7 @@
                             android:layout_height="wrap_content"
                             style="@style/Zt.LabelCaps"
                             android:text="LIQUIDITY_GAP"
+                            android:lineSpacingExtra="2dp"
                             android:textColor="@color/secondary"
                             android:layout_marginStart="8dp"
                             android:textAllCaps="true" />
@@ -1247,6 +1287,7 @@
                         android:layout_height="wrap_content"
                         style="@style/Zt.NumSm"
                         android:text="WEIGHT: 0.94"
+                        android:lineSpacingExtra="3dp"
                         android:textColor="@color/tertiary" />
                 </LinearLayout>
                 <TextView
@@ -1254,17 +1295,17 @@
                     android:layout_height="wrap_content"
                     style="@style/Zt.BodySm"
                     android:text=""
+                    android:lineSpacingExtra="5dp"
                     android:textColor="@color/on_surface"
                     android:id="@+id/tv_lesson_1"
                     android:textSize="14sp"
-                    android:lineSpacingExtra="4dp"
-                    android:layout_marginTop="8dp" />
+                    android:layout_marginTop="12dp" />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="12dp">
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -1281,6 +1322,7 @@
                             android:layout_height="wrap_content"
                             style="@style/Zt.NumSm"
                             android:text="Rule Applied to Execution Pipeline"
+                            android:lineSpacingExtra="3dp"
                             android:textColor="@color/on_surface_variant"
                             android:layout_marginStart="4dp"
                             android:layout_weight="1" />
@@ -1290,6 +1332,7 @@
                         android:layout_height="wrap_content"
                         style="@style/Zt.NumSm"
                         android:text="2d ago"
+                        android:lineSpacingExtra="3dp"
                         android:textColor="@color/on_surface_variant"
                         android:layout_marginStart="8dp" />
                 </LinearLayout>
@@ -1316,6 +1359,7 @@
                             android:layout_height="wrap_content"
                             style="@style/Zt.NumSm"
                             android:text="LESSON #38"
+                            android:lineSpacingExtra="3dp"
                             android:textColor="@color/primary"
                             android:background="@drawable/bg_r2_highest"
                             android:paddingStart="8dp"
@@ -1328,6 +1372,7 @@
                             android:layout_height="wrap_content"
                             style="@style/Zt.LabelCaps"
                             android:text="SPREAD_SURGE"
+                            android:lineSpacingExtra="2dp"
                             android:textColor="@color/secondary"
                             android:layout_marginStart="8dp"
                             android:textAllCaps="true" />
@@ -1341,6 +1386,7 @@
                         android:layout_height="wrap_content"
                         style="@style/Zt.NumSm"
                         android:text="WEIGHT: 0.88"
+                        android:lineSpacingExtra="3dp"
                         android:textColor="@color/tertiary" />
                 </LinearLayout>
                 <TextView
@@ -1348,17 +1394,17 @@
                     android:layout_height="wrap_content"
                     style="@style/Zt.BodySm"
                     android:text=""
+                    android:lineSpacingExtra="5dp"
                     android:textColor="@color/on_surface"
                     android:id="@+id/tv_lesson_2"
                     android:textSize="14sp"
-                    android:lineSpacingExtra="4dp"
-                    android:layout_marginTop="8dp" />
+                    android:layout_marginTop="12dp" />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="12dp">
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -1375,6 +1421,7 @@
                             android:layout_height="wrap_content"
                             style="@style/Zt.NumSm"
                             android:text="Filter Injected to Risk Agent"
+                            android:lineSpacingExtra="3dp"
                             android:textColor="@color/on_surface_variant"
                             android:layout_marginStart="4dp"
                             android:layout_weight="1" />
@@ -1384,6 +1431,7 @@
                         android:layout_height="wrap_content"
                         style="@style/Zt.NumSm"
                         android:text="5d ago"
+                        android:lineSpacingExtra="3dp"
                         android:textColor="@color/on_surface_variant"
                         android:layout_marginStart="8dp" />
                 </LinearLayout>
@@ -1412,15 +1460,17 @@
                     android:layout_height="wrap_content"
                     style="@style/Zt.LabelCaps"
                     android:text="Autonomous Optimization Engaged"
+                    android:lineSpacingExtra="2dp"
                     android:textColor="@color/on_surface"
                     android:gravity="center"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="8dp"
                     android:textAllCaps="false" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/Zt.BodySm"
                     android:text="The VPS updates weights continuously after every 10 executed market orders."
+                    android:lineSpacingExtra="4dp"
                     android:textColor="@color/on_surface_variant"
                     android:gravity="center"
                     android:layout_marginTop="4dp"

@@ -8,7 +8,6 @@
     android:scrollbars="none"
     android:fillViewport="true"
     android:overScrollMode="never">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,80 +15,95 @@
         android:paddingTop="12dp"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:paddingBottom="96dp">
-
-        <!-- ═══════════════════════════════════════════════════════════
-             TOP SOVEREIGN HEADER / GUARDIAN SHIELD BANNER
-             ═══════════════════════════════════════════════════════════ -->
+        android:paddingBottom="48dp">
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_r8_signal"
-            android:clipChildren="false">
-
-            <!-- Glow decoration -->
+            android:background="@drawable/bg_r8_signal">
             <View
                 android:layout_width="144dp"
                 android:layout_height="144dp"
                 android:layout_gravity="end|top"
-                android:layout_marginEnd="-32dp"
-                android:layout_marginTop="-32dp"
+                android:layout_marginEnd="-50dp"
+                android:layout_marginTop="-50dp"
                 android:background="@drawable/bg_glow_primary" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="16dp">
-
-                <!-- Icon + Title row -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <FrameLayout
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:background="@drawable/bg_r4_surface_high">
-                        <ImageView
-                            android:layout_width="22dp"
-                            android:layout_height="22dp"
-                            android:src="@drawable/ic_s_shield_person"
-                            android:tint="@color/primary"
-                            android:layout_gravity="center" />
-                    </FrameLayout>
-
+                    android:gravity="top">
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_weight="1"
-                        android:layout_marginStart="12dp">
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+                        <FrameLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/bg_r4_surface_high">
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@drawable/ic_s_shield_person"
+                                android:tint="@color/primary"
+                                android:layout_gravity="center" />
+                        </FrameLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.LabelCaps"
+                                android:text="Sovereign Protocol"
+                                android:textColor="@color/primary"
+                                android:letterSpacing="0.15"
+                                android:textAllCaps="true" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Zt.HeadlineMd"
+                                android:text="System Architecture"
+                                android:textColor="@color/on_surface"
+                                android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_r2_tertiary10"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:layout_marginStart="8dp">
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:background="@drawable/bg_dot_tertiary"
+                            android:id="@+id/dot_armed"
+                            android:layout_marginEnd="6dp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            style="@style/Zt.LabelCaps"
-                            android:text="Sovereign Protocol"
-                            android:textColor="@color/primary"
-                            android:letterSpacing="0.15"
+                            style="@style/Zt.NumSm"
+                            android:text="ARMED &amp; SYNCED"
+                            android:textColor="@color/tertiary"
                             android:textAllCaps="true"
-                            android:singleLine="true"
-                            android:ellipsize="end" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            style="@style/Zt.HeadlineMd"
-                            android:text="System Architecture"
-                            android:textColor="@color/on_surface"
-                            android:layout_marginTop="2dp"
-                            android:singleLine="true"
-                            android:ellipsize="end" />
+                            android:maxWidth="70dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
-
-                <!-- Lock / TLS row -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -97,13 +111,11 @@
                     android:gravity="center_vertical"
                     android:layout_marginTop="16dp"
                     android:paddingTop="8dp">
-
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1">
+                        android:gravity="center_vertical">
                         <ImageView
                             android:layout_width="16dp"
                             android:layout_height="16dp"
@@ -115,11 +127,12 @@
                             style="@style/Zt.BodySm"
                             android:text="Hardware Keystore v4.2"
                             android:textColor="@color/on_surface_variant"
-                            android:layout_marginStart="4dp"
-                            android:singleLine="true"
-                            android:ellipsize="end" />
+                            android:layout_marginStart="4dp" />
                     </LinearLayout>
-
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -129,19 +142,13 @@
                 </LinearLayout>
             </LinearLayout>
         </FrameLayout>
-
-        <!-- ═══════════════════════════════════════════════════════════
-             SECTION 1: VPS FastAPI Connection
-             ═══════════════════════════════════════════════════════════ -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/bg_r8_signal"
             android:padding="16dp"
-            android:layout_marginTop="16dp">
-
-            <!-- Section header -->
+            android:layout_marginTop="24dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -164,9 +171,7 @@
                         style="@style/Zt.HeadlineSm"
                         android:text="VPS Core Execution"
                         android:textColor="@color/on_surface"
-                        android:layout_marginStart="4dp"
-                        android:singleLine="true"
-                        android:ellipsize="end" />
+                        android:layout_marginStart="4dp" />
                 </LinearLayout>
                 <TextView
                     android:layout_width="wrap_content"
@@ -174,46 +179,51 @@
                     style="@style/Zt.LabelCaps"
                     android:text="FastAPI Daemon"
                     android:textColor="@color/on_surface_variant"
-                    android:textAllCaps="true"
-                    android:singleLine="true" />
+                    android:maxWidth="70dp"
+                    android:gravity="end"
+                    android:layout_marginStart="8dp"
+                    android:textAllCaps="true" />
             </LinearLayout>
-
-            <!-- Status pill -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/bg_r4_lowest"
                 android:padding="8dp"
-                android:layout_marginTop="12dp">
-
+                android:layout_marginTop="16dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_vertical">
-                    <View
-                        android:layout_width="8dp"
-                        android:layout_height="8dp"
-                        android:background="@drawable/bg_dot_tertiary"
-                        android:layout_marginEnd="8dp" />
-                    <TextView
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        style="@style/Zt.NumSm"
-                        android:text="CONNECTED (18ms)"
-                        android:textColor="@color/tertiary"
-                        android:layout_weight="1"
-                        android:singleLine="true" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:background="@drawable/bg_dot_tertiary"
+                            android:layout_marginEnd="8dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="CONNECTED (18ms)"
+                            android:textColor="@color/tertiary" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/Zt.NumSm"
                         android:text="Uptime: 24d 18h 42m"
-                        android:textColor="@color/on_surface_variant"
-                        android:singleLine="true" />
+                        android:textColor="@color/on_surface_variant" />
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -238,8 +248,6 @@
                         android:layout_marginStart="8dp" />
                 </LinearLayout>
             </LinearLayout>
-
-            <!-- HOST IP / DOMAIN field -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -286,16 +294,12 @@
                         android:layout_marginEnd="12dp" />
                 </FrameLayout>
             </LinearLayout>
-
-            <!-- PORT + PROTOCOL row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="top"
                 android:layout_marginTop="8dp">
-
-                <!-- PORT -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -311,26 +315,29 @@
                     <Space
                         android:layout_width="match_parent"
                         android:layout_height="4dp" />
-                    <EditText
-                        android:id="@+id/et_port"
+                    <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bg_input"
-                        android:text="8000"
-                        android:textColor="@color/on_surface"
-                        android:textSize="15sp"
-                        android:fontFamily="monospace"
-                        android:includeFontPadding="false"
-                        android:inputType="number"
-                        android:singleLine="true"
-                        android:paddingStart="12dp"
-                        android:paddingEnd="12dp"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp"
-                        android:importantForAutofill="no" />
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/et_port"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_input"
+                            android:text="8000"
+                            android:textColor="@color/on_surface"
+                            android:textColorHint="#80D0C5AF"
+                            android:textSize="15sp"
+                            android:fontFamily="monospace"
+                            android:includeFontPadding="false"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:importantForAutofill="no" />
+                    </FrameLayout>
                 </LinearLayout>
-
-                <!-- PROTOCOL -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -353,48 +360,46 @@
                         android:orientation="horizontal"
                         android:gravity="center_vertical">
                         <TextView
-                            android:id="@+id/seg_https"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             style="@style/Zt.LabelCaps"
                             android:text="HTTPS (SSL)"
                             android:textColor="@color/primary"
+                            android:id="@+id/seg_https"
+                            android:layout_weight="1"
+                            android:gravity="center"
                             android:textAllCaps="true"
                             android:textStyle="bold"
-                            android:gravity="center"
                             android:background="@drawable/bg_r2_high"
-                            android:paddingTop="8dp"
-                            android:paddingBottom="8dp"
-                            android:paddingStart="8dp"
-                            android:paddingEnd="8dp"
-                            android:layout_weight="1"
-                            android:layout_marginEnd="4dp"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
                             android:clickable="true"
                             android:focusable="true"
-                            android:singleLine="true" />
+                            android:layout_marginEnd="8dp" />
                         <TextView
-                            android:id="@+id/seg_wss"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             style="@style/Zt.LabelCaps"
                             android:text="WSS LIVE"
                             android:textColor="@color/on_surface_variant"
-                            android:textAllCaps="true"
-                            android:gravity="center"
-                            android:background="@drawable/bg_r2_lowest"
-                            android:paddingTop="8dp"
-                            android:paddingBottom="8dp"
-                            android:paddingStart="8dp"
-                            android:paddingEnd="8dp"
+                            android:id="@+id/seg_wss"
                             android:layout_weight="1"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            android:textStyle="normal"
+                            android:background="@drawable/bg_r2_lowest"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
                             android:clickable="true"
                             android:focusable="true"
-                            android:singleLine="true" />
+                            android:layout_marginEnd="0dp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-
-            <!-- SECRET ACCESS TOKEN -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -406,9 +411,7 @@
                     style="@style/Zt.LabelCaps"
                     android:text="SECRET ACCESS TOKEN (JWT / ED25519)"
                     android:textColor="@color/on_surface_variant"
-                    android:textAllCaps="false"
-                    android:singleLine="true"
-                    android:ellipsize="end" />
+                    android:textAllCaps="false" />
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="4dp" />
@@ -422,6 +425,7 @@
                         android:background="@drawable/bg_input"
                         android:text="zen_sec_k990f12da34e9081bb20f"
                         android:textColor="@color/on_surface"
+                        android:textColorHint="#80D0C5AF"
                         android:textSize="15sp"
                         android:fontFamily="monospace"
                         android:includeFontPadding="false"
@@ -433,11 +437,11 @@
                         android:paddingBottom="8dp"
                         android:importantForAutofill="no" />
                     <ImageView
-                        android:id="@+id/et_vps_token_toggle"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/ic_s_visibility"
                         android:tint="@color/on_surface_variant"
+                        android:id="@+id/et_vps_token_toggle"
                         android:padding="6dp"
                         android:layout_gravity="end|center_vertical"
                         android:layout_marginEnd="6dp"
@@ -445,8 +449,6 @@
                         android:focusable="true" />
                 </FrameLayout>
             </LinearLayout>
-
-            <!-- Action buttons: Test Ping + Reconnect -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -454,11 +456,11 @@
                 android:gravity="center_vertical"
                 android:layout_marginTop="16dp">
                 <LinearLayout
-                    android:id="@+id/btn_ping"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center"
+                    android:id="@+id/btn_ping"
                     android:layout_weight="1"
                     android:background="@drawable/bg_r2_high"
                     android:paddingTop="10dp"
@@ -481,11 +483,11 @@
                         android:layout_marginStart="6dp" />
                 </LinearLayout>
                 <LinearLayout
-                    android:id="@+id/btn_reconnect"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center"
+                    android:id="@+id/btn_reconnect"
                     android:layout_weight="1"
                     android:background="@drawable/bg_r2_primary"
                     android:paddingTop="10dp"
@@ -510,19 +512,13 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-
-        <!-- ═══════════════════════════════════════════════════════════
-             SECTION 2: Universal LLM & AI Engine (litellm / OpenAI Spec)
-             ═══════════════════════════════════════════════════════════ -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/bg_r8_signal"
             android:padding="16dp"
-            android:layout_marginTop="16dp">
-
-            <!-- Section header -->
+            android:layout_marginTop="24dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -540,15 +536,12 @@
                         android:src="@drawable/ic_s_psychology"
                         android:tint="@color/primary" />
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/Zt.HeadlineSm"
                         android:text="Neural Intelligence API"
                         android:textColor="@color/on_surface"
-                        android:layout_marginStart="4dp"
-                        android:layout_weight="1"
-                        android:singleLine="true"
-                        android:ellipsize="end" />
+                        android:layout_marginStart="4dp" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -570,8 +563,6 @@
                         android:textAllCaps="true" />
                 </LinearLayout>
             </LinearLayout>
-
-            <!-- LITELLM / PROXY BASE URL -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -597,6 +588,7 @@
                         android:background="@drawable/bg_input"
                         android:text="https://openrouter.ai/api/v1"
                         android:textColor="@color/on_surface"
+                        android:textColorHint="#80D0C5AF"
                         android:textSize="15sp"
                         android:fontFamily="monospace"
                         android:includeFontPadding="false"
@@ -616,8 +608,6 @@
                         android:layout_marginEnd="12dp" />
                 </FrameLayout>
             </LinearLayout>
-
-            <!-- UNIVERSAL API KEY -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -643,6 +633,7 @@
                         android:background="@drawable/bg_input"
                         android:text="sk-or-v1-98ad23bca0192e40f890c"
                         android:textColor="@color/on_surface"
+                        android:textColorHint="#80D0C5AF"
                         android:textSize="15sp"
                         android:fontFamily="monospace"
                         android:includeFontPadding="false"
@@ -654,11 +645,11 @@
                         android:paddingBottom="8dp"
                         android:importantForAutofill="no" />
                     <ImageView
-                        android:id="@+id/et_llm_key_toggle"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/ic_s_visibility"
                         android:tint="@color/on_surface_variant"
+                        android:id="@+id/et_llm_key_toggle"
                         android:padding="6dp"
                         android:layout_gravity="end|center_vertical"
                         android:layout_marginEnd="6dp"
@@ -666,8 +657,6 @@
                         android:focusable="true" />
                 </FrameLayout>
             </LinearLayout>
-
-            <!-- PRIMARY QUANT AGENT MODEL -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -680,9 +669,6 @@
                     android:text="PRIMARY QUANT AGENT MODEL"
                     android:textColor="@color/on_surface_variant"
                     android:textAllCaps="false" />
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp" />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -692,7 +678,8 @@
                     android:paddingStart="12dp"
                     android:paddingEnd="12dp"
                     android:paddingTop="8dp"
-                    android:paddingBottom="8dp">
+                    android:paddingBottom="8dp"
+                    android:layout_marginTop="4dp">
                     <ImageView
                         android:layout_width="18dp"
                         android:layout_height="18dp"
@@ -724,17 +711,13 @@
                         android:textColor="@color/on_secondary_container"
                         android:textSize="10sp"
                         android:textAllCaps="true"
-                        android:textStyle="bold"
                         android:background="@drawable/bg_r2_secondary_pill"
                         android:paddingStart="6dp"
                         android:paddingEnd="6dp"
                         android:paddingTop="2dp"
-                        android:paddingBottom="2dp"
-                        android:singleLine="true" />
+                        android:paddingBottom="2dp" />
                 </LinearLayout>
             </LinearLayout>
-
-            <!-- 3/3 Endpoints status row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -769,30 +752,24 @@
                         android:ellipsize="end" />
                 </LinearLayout>
                 <TextView
-                    android:id="@+id/btn_diag"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/Zt.NumSm"
                     android:text="Diag Run"
                     android:textColor="@color/primary"
+                    android:id="@+id/btn_diag"
                     android:layout_marginStart="8dp"
                     android:clickable="true"
                     android:focusable="true" />
             </LinearLayout>
         </LinearLayout>
-
-        <!-- ═══════════════════════════════════════════════════════════
-             SECTION 3: Broker Execution Gateway
-             ═══════════════════════════════════════════════════════════ -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/bg_r8_signal"
             android:padding="16dp"
-            android:layout_marginTop="16dp">
-
-            <!-- Section header -->
+            android:layout_marginTop="24dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -815,9 +792,7 @@
                         style="@style/Zt.HeadlineSm"
                         android:text="Broker Gateway"
                         android:textColor="@color/on_surface"
-                        android:layout_marginStart="4dp"
-                        android:singleLine="true"
-                        android:ellipsize="end" />
+                        android:layout_marginStart="4dp" />
                 </LinearLayout>
                 <TextView
                     android:layout_width="wrap_content"
@@ -825,87 +800,86 @@
                     style="@style/Zt.LabelCaps"
                     android:text="DMA LINK"
                     android:textColor="@color/primary"
-                    android:textAllCaps="true"
                     android:textStyle="bold"
                     android:background="@drawable/bg_r2_primary10"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
                     android:paddingTop="2dp"
                     android:paddingBottom="2dp"
-                    android:singleLine="true" />
+                    android:textAllCaps="true" />
             </LinearLayout>
-
-            <!-- Broker selector tabs: MT5 / cTrader / IBKR -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="12dp">
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp">
                 <TextView
-                    android:id="@+id/tab_mt5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     style="@style/Zt.HeadlineSm"
                     android:text="MT5 Bridge"
                     android:textColor="@color/on_primary"
-                    android:textStyle="bold"
+                    android:id="@+id/chip_mt5"
+                    android:layout_weight="1"
                     android:gravity="center"
+                    android:textStyle="bold"
                     android:background="@drawable/bg_r2_primary"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="4dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
                     android:clickable="true"
                     android:focusable="true"
+                    android:layout_marginEnd="6dp"
                     android:singleLine="true"
                     android:ellipsize="end" />
                 <TextView
-                    android:id="@+id/tab_ctrader"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     style="@style/Zt.HeadlineSm"
                     android:text="cTrader FIX"
                     android:textColor="@color/on_surface_variant"
+                    android:id="@+id/chip_ctrader"
+                    android:layout_weight="1"
                     android:gravity="center"
+                    android:textStyle="normal"
                     android:background="@drawable/bg_r2_lowest"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="4dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
                     android:clickable="true"
                     android:focusable="true"
+                    android:layout_marginEnd="6dp"
                     android:singleLine="true"
                     android:ellipsize="end" />
                 <TextView
-                    android:id="@+id/tab_ibkr"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     style="@style/Zt.HeadlineSm"
                     android:text="IBKR TWS"
                     android:textColor="@color/on_surface_variant"
+                    android:id="@+id/chip_ibkr"
+                    android:layout_weight="1"
                     android:gravity="center"
+                    android:textStyle="normal"
                     android:background="@drawable/bg_r2_lowest"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:layout_weight="1"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
                     android:clickable="true"
                     android:focusable="true"
+                    android:layout_marginEnd="0dp"
                     android:singleLine="true"
                     android:ellipsize="end" />
             </LinearLayout>
-
-            <!-- BROKER LIQUIDITY SERVER ID -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="12dp">
+                android:layout_marginTop="16dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -916,69 +890,74 @@
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="4dp" />
-                <EditText
-                    android:id="@+id/et_broker_server"
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_input"
-                    android:text="ICMarketsSC-Live04"
-                    android:textColor="@color/on_surface"
-                    android:textSize="15sp"
-                    android:fontFamily="monospace"
-                    android:includeFontPadding="false"
-                    android:inputType="text"
-                    android:singleLine="true"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="12dp"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:importantForAutofill="no" />
-            </LinearLayout>
-
-            <!-- ACCOUNT NUMBER + ROUTING SPREAD -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="top"
-                android:layout_marginTop="8dp">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        style="@style/Zt.LabelCaps"
-                        android:text="ACCOUNT NUMBER"
-                        android:textColor="@color/on_surface_variant"
-                        android:textAllCaps="false"
-                        android:singleLine="true"
-                        android:ellipsize="end" />
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="4dp" />
+                    android:layout_height="wrap_content">
                     <EditText
-                        android:id="@+id/et_account_number"
+                        android:id="@+id/et_server"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_input"
-                        android:text="8921004"
+                        android:text="ICMarketsSC-Live04"
                         android:textColor="@color/on_surface"
+                        android:textColorHint="#80D0C5AF"
                         android:textSize="15sp"
                         android:fontFamily="monospace"
                         android:includeFontPadding="false"
-                        android:inputType="number"
+                        android:inputType="text"
                         android:singleLine="true"
                         android:paddingStart="12dp"
                         android:paddingEnd="12dp"
                         android:paddingTop="8dp"
                         android:paddingBottom="8dp"
                         android:importantForAutofill="no" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="top"
+                android:layout_marginTop="8dp">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.LabelCaps"
+                        android:text="ACCOUNT NUMBER"
+                        android:textColor="@color/on_surface_variant"
+                        android:textAllCaps="false" />
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp" />
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/et_account"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_input"
+                            android:text="8921004"
+                            android:textColor="@color/on_surface"
+                            android:textColorHint="#80D0C5AF"
+                            android:textSize="15sp"
+                            android:fontFamily="monospace"
+                            android:includeFontPadding="false"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:importantForAutofill="no" />
+                    </FrameLayout>
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -991,34 +970,36 @@
                         style="@style/Zt.LabelCaps"
                         android:text="ROUTING SPREAD"
                         android:textColor="@color/on_surface_variant"
-                        android:textAllCaps="false"
-                        android:singleLine="true"
-                        android:ellipsize="end" />
+                        android:textAllCaps="false" />
                     <Space
                         android:layout_width="match_parent"
                         android:layout_height="4dp" />
-                    <EditText
-                        android:id="@+id/et_routing_spread"
+                    <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bg_input"
-                        android:text="Raw ECN Zero"
-                        android:textColor="@color/tertiary"
-                        android:textSize="15sp"
-                        android:fontFamily="monospace"
-                        android:includeFontPadding="false"
-                        android:inputType="text"
-                        android:singleLine="true"
-                        android:paddingStart="12dp"
-                        android:paddingEnd="12dp"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp"
-                        android:focusable="false"
-                        android:importantForAutofill="no" />
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/et_spread"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_input"
+                            android:text="Raw ECN Zero"
+                            android:textColor="@color/tertiary"
+                            android:textColorHint="#80D0C5AF"
+                            android:textSize="15sp"
+                            android:fontFamily="monospace"
+                            android:includeFontPadding="false"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:importantForAutofill="no"
+                            android:focusable="false"
+                            android:cursorVisible="false" />
+                    </FrameLayout>
                 </LinearLayout>
             </LinearLayout>
-
-            <!-- ENCRYPTED TRADING SECRET -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1044,6 +1025,7 @@
                         android:background="@drawable/bg_input"
                         android:text="mk7_f8902_prod_rsa"
                         android:textColor="@color/on_surface"
+                        android:textColorHint="#80D0C5AF"
                         android:textSize="15sp"
                         android:fontFamily="monospace"
                         android:includeFontPadding="false"
@@ -1055,11 +1037,11 @@
                         android:paddingBottom="8dp"
                         android:importantForAutofill="no" />
                     <ImageView
-                        android:id="@+id/et_broker_secret_toggle"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/ic_s_visibility"
                         android:tint="@color/on_surface_variant"
+                        android:id="@+id/et_broker_secret_toggle"
                         android:padding="6dp"
                         android:layout_gravity="end|center_vertical"
                         android:layout_marginEnd="6dp"
@@ -1068,32 +1050,22 @@
                 </FrameLayout>
             </LinearLayout>
         </LinearLayout>
-
-        <!-- ═══════════════════════════════════════════════════════════
-             SECTION 4: Sovereign Hardcoded Risk Governance
-             ═══════════════════════════════════════════════════════════ -->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:clipChildren="false">
-
-            <!-- BG glow left accent -->
+            android:background="@drawable/bg_r8_signal"
+            android:layout_marginTop="24dp">
             <View
                 android:layout_width="96dp"
                 android:layout_height="96dp"
                 android:layout_gravity="start|center_vertical"
                 android:layout_marginStart="-24dp"
                 android:background="@drawable/bg_glow_secondary" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@drawable/bg_r8_signal"
                 android:padding="16dp">
-
-                <!-- Section header -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1116,9 +1088,7 @@
                             style="@style/Zt.HeadlineSm"
                             android:text="Hardcoded Risk Rules"
                             android:textColor="@color/on_surface"
-                            android:layout_marginStart="4dp"
-                            android:singleLine="true"
-                            android:ellipsize="end" />
+                            android:layout_marginStart="4dp" />
                     </LinearLayout>
                     <TextView
                         android:layout_width="wrap_content"
@@ -1127,24 +1097,21 @@
                         android:text="VPS ENFORCED"
                         android:textColor="@color/error"
                         android:textStyle="bold"
-                        android:textAllCaps="true"
-                        android:background="@drawable/bg_r2_error20"
+                        android:background="@drawable/bg_r2_error40"
+                        android:layout_marginStart="8dp"
                         android:paddingStart="8dp"
                         android:paddingEnd="8dp"
                         android:paddingTop="2dp"
                         android:paddingBottom="2dp"
-                        android:singleLine="true" />
+                        android:textAllCaps="true" />
                 </LinearLayout>
-
-                <!-- Parameter 1: Max Daily Drawdown (with slider) -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:background="@drawable/bg_r4_lowest"
-                    android:padding="12dp"
+                    android:padding="8dp"
                     android:layout_marginTop="16dp">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1161,6 +1128,7 @@
                                 style="@style/Zt.BodySm"
                                 android:text="Max Daily Drawdown"
                                 android:textColor="@color/on_surface"
+                                android:textSize="14sp"
                                 android:textStyle="bold" />
                             <TextView
                                 android:layout_width="wrap_content"
@@ -1171,41 +1139,41 @@
                                 android:layout_marginTop="2dp" />
                         </LinearLayout>
                         <TextView
-                            android:id="@+id/tv_max_dd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            style="@style/Zt.NumSm"
+                            style="@style/Zt.NumMd"
                             android:text="3.0 %"
                             android:textColor="@color/primary"
-                            android:textStyle="bold"
+                            android:id="@+id/tv_dd_value"
                             android:background="@drawable/bg_r2_high"
                             android:paddingStart="8dp"
                             android:paddingEnd="8dp"
                             android:paddingTop="4dp"
                             android:paddingBottom="4dp"
-                            android:layout_marginStart="8dp" />
+                            android:layout_marginStart="8dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
-
                     <SeekBar
-                        android:id="@+id/seekbar_max_dd"
+                        android:id="@+id/seek_dd"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
                         android:max="18"
                         android:progress="4"
                         android:progressTint="@color/primary"
-                        android:thumbTint="@color/primary" />
+                        android:thumbTint="@color/primary"
+                        android:progressBackgroundTint="#343538"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_marginTop="8dp" />
                 </LinearLayout>
-
-                <!-- Parameter 2: Max Risk Per Trade -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:background="@drawable/bg_r4_lowest"
-                    android:padding="12dp"
-                    android:layout_marginTop="8dp">
+                    android:padding="8dp"
+                    android:layout_marginTop="16dp">
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -1217,6 +1185,7 @@
                             style="@style/Zt.BodySm"
                             android:text="Max Risk Per Trade"
                             android:textColor="@color/on_surface"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
                         <TextView
                             android:layout_width="wrap_content"
@@ -1224,17 +1193,14 @@
                             style="@style/Zt.BodySm"
                             android:text="Fractional equity allocation cap"
                             android:textColor="@color/on_surface_variant"
-                            android:layout_marginTop="2dp"
-                            android:singleLine="true"
-                            android:ellipsize="end" />
+                            android:layout_marginTop="2dp" />
                     </LinearLayout>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        style="@style/Zt.NumSm"
+                        style="@style/Zt.NumMd"
                         android:text="1.0 %"
                         android:textColor="@color/on_surface"
-                        android:textStyle="bold"
                         android:background="@drawable/bg_r2_high"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
@@ -1242,22 +1208,19 @@
                         android:paddingBottom="4dp"
                         android:layout_marginStart="8dp" />
                 </LinearLayout>
-
-                <!-- Parameter 3 & 4: Concurrent Open + R:R Floor (grid 2 col) -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="8dp">
-
-                    <!-- Concurrent Open Trades -->
+                    android:gravity="top"
+                    android:layout_marginTop="16dp">
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_weight="1"
                         android:background="@drawable/bg_r4_lowest"
-                        android:padding="12dp"
+                        android:padding="8dp"
                         android:layout_marginEnd="4dp">
                         <TextView
                             android:layout_width="wrap_content"
@@ -1265,22 +1228,23 @@
                             style="@style/Zt.LabelCaps"
                             android:text="CONCURRENT OPEN"
                             android:textColor="@color/on_surface_variant"
-                            android:textAllCaps="true"
-                            android:singleLine="true"
-                            android:ellipsize="end" />
+                            android:textAllCaps="false" />
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:gravity="bottom"
-                            android:layout_marginTop="8dp">
+                            android:layout_marginTop="4dp">
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                style="@style/Zt.HeadlineMd"
+                                style="@style/Zt.NumLg"
                                 android:text="3"
                                 android:textColor="@color/on_surface"
-                                android:textStyle="bold"
+                                android:textStyle="bold" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
                                 android:layout_weight="1" />
                             <TextView
                                 android:layout_width="wrap_content"
@@ -1290,40 +1254,38 @@
                                 android:textColor="@color/on_surface_variant" />
                         </LinearLayout>
                     </LinearLayout>
-
-                    <!-- R:R Floor Ratio -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_weight="1"
                         android:background="@drawable/bg_r4_lowest"
-                        android:padding="12dp"
-                        android:layout_marginStart="4dp">
+                        android:padding="8dp"
+                        android:layout_marginEnd="0dp">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/Zt.LabelCaps"
                             android:text="R:R FLOOR RATIO"
                             android:textColor="@color/on_surface_variant"
-                            android:textAllCaps="true"
-                            android:singleLine="true"
-                            android:ellipsize="end" />
+                            android:textAllCaps="false" />
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:gravity="bottom"
-                            android:layout_marginTop="8dp">
+                            android:layout_marginTop="4dp">
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                style="@style/Zt.HeadlineMd"
+                                style="@style/Zt.NumLg"
                                 android:text="1 : 2.0"
                                 android:textColor="@color/primary"
-                                android:textStyle="bold"
-                                android:layout_weight="1"
-                                android:singleLine="true" />
+                                android:textStyle="bold" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_weight="1" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1335,19 +1297,13 @@
                 </LinearLayout>
             </LinearLayout>
         </FrameLayout>
-
-        <!-- ═══════════════════════════════════════════════════════════
-             SECTION 5: Memory Bank & Vector Store
-             ═══════════════════════════════════════════════════════════ -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/bg_r8_signal"
             android:padding="16dp"
-            android:layout_marginTop="16dp">
-
-            <!-- Section header -->
+            android:layout_marginTop="24dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1370,38 +1326,33 @@
                         style="@style/Zt.HeadlineSm"
                         android:text="Agent Memory Matrix"
                         android:textColor="@color/on_surface"
-                        android:layout_marginStart="4dp"
-                        android:singleLine="true"
-                        android:ellipsize="end" />
+                        android:layout_marginStart="4dp" />
                 </LinearLayout>
-                <!-- 1,420 Vectors badge -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:background="@drawable/bg_r2_high"
+                    android:layout_marginStart="8dp"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
                     android:paddingTop="2dp"
-                    android:paddingBottom="2dp"
-                    android:layout_marginStart="8dp">
+                    android:paddingBottom="2dp">
                     <ImageView
                         android:layout_width="14dp"
                         android:layout_height="14dp"
                         android:src="@drawable/ic_s_memory"
-                        android:tint="@color/tertiary"
-                        android:layout_marginEnd="4dp" />
+                        android:tint="@color/tertiary" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/Zt.NumSm"
                         android:text="1,420 Vectors"
-                        android:textColor="@color/on_surface_variant" />
+                        android:textColor="@color/on_surface_variant"
+                        android:layout_marginStart="6dp" />
                 </LinearLayout>
             </LinearLayout>
-
-            <!-- DB info row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1409,16 +1360,14 @@
                 android:gravity="center_vertical"
                 android:background="@drawable/bg_r4_lowest"
                 android:padding="8dp"
-                android:layout_marginTop="12dp">
+                android:layout_marginTop="16dp">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     style="@style/Zt.BodySm"
                     android:text="Database Engine: ChromaDB / SQLite WAL"
                     android:textColor="@color/on_surface_variant"
-                    android:layout_weight="1"
-                    android:singleLine="true"
-                    android:ellipsize="end" />
+                    android:layout_weight="1" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -1427,19 +1376,18 @@
                     android:textColor="@color/tertiary"
                     android:layout_marginStart="8dp" />
             </LinearLayout>
-
-            <!-- DB Actions: Export + Restore -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="12dp">
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp">
                 <LinearLayout
-                    android:id="@+id/btn_export_db"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center"
+                    android:id="@+id/btn_export"
                     android:layout_weight="1"
                     android:background="@drawable/bg_r2_high"
                     android:paddingTop="10dp"
@@ -1459,16 +1407,14 @@
                         style="@style/Zt.HeadlineSm"
                         android:text="Export DB (.zip)"
                         android:textColor="@color/on_surface"
-                        android:layout_marginStart="8dp"
-                        android:singleLine="true"
-                        android:ellipsize="end" />
+                        android:layout_marginStart="8dp" />
                 </LinearLayout>
                 <LinearLayout
-                    android:id="@+id/btn_restore_db"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center"
+                    android:id="@+id/btn_restore"
                     android:layout_weight="1"
                     android:background="@drawable/bg_r2_high"
                     android:paddingTop="10dp"
@@ -1488,25 +1434,17 @@
                         style="@style/Zt.HeadlineSm"
                         android:text="Restore Bank"
                         android:textColor="@color/on_surface"
-                        android:layout_marginStart="8dp"
-                        android:singleLine="true"
-                        android:ellipsize="end" />
+                        android:layout_marginStart="8dp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-
-        <!-- ═══════════════════════════════════════════════════════════
-             SECTION 6: Biometrics & Sovereign Safeguards
-             ═══════════════════════════════════════════════════════════ -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/bg_r8_signal"
             android:padding="16dp"
-            android:layout_marginTop="16dp">
-
-            <!-- Section header -->
+            android:layout_marginTop="24dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1529,9 +1467,7 @@
                         style="@style/Zt.HeadlineSm"
                         android:text="Biometrics &amp; Security"
                         android:textColor="@color/on_surface"
-                        android:layout_marginStart="4dp"
-                        android:singleLine="true"
-                        android:ellipsize="end" />
+                        android:layout_marginStart="4dp" />
                 </LinearLayout>
                 <TextView
                     android:layout_width="wrap_content"
@@ -1539,51 +1475,58 @@
                     style="@style/Zt.LabelCaps"
                     android:text="Local Vault"
                     android:textColor="@color/on_surface_variant"
+                    android:layout_marginStart="8dp"
                     android:textAllCaps="true" />
             </LinearLayout>
-
-            <!-- Toggle 1: 6-Digit Security PIN -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:background="@drawable/bg_r4_lowest"
-                android:padding="12dp"
+                android:padding="8dp"
                 android:layout_marginTop="16dp">
-                <FrameLayout
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:background="@drawable/bg_r2_high">
-                    <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:src="@drawable/ic_s_dialpad"
-                        android:tint="@color/primary"
-                        android:layout_gravity="center" />
-                </FrameLayout>
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:layout_marginStart="12dp">
-                    <TextView
-                        android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1">
+                    <FrameLayout
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/bg_r2_high">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_s_dialpad"
+                            android:tint="@color/primary"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        style="@style/Zt.BodySm"
-                        android:text="6-Digit Security PIN"
-                        android:textColor="@color/on_surface"
-                        android:textStyle="bold" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        style="@style/Zt.BodySm"
-                        android:text="Required for parameter edit"
-                        android:textColor="@color/on_surface_variant"
-                        android:layout_marginTop="2dp"
-                        android:singleLine="true"
-                        android:ellipsize="end" />
+                        android:orientation="vertical"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.BodySm"
+                            android:text="6-Digit Security PIN"
+                            android:textColor="@color/on_surface"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:singleLine="true"
+                            android:ellipsize="end" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.BodySm"
+                            android:text="Required for parameter edit"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
                 </LinearLayout>
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/switch_pin"
@@ -1594,54 +1537,60 @@
                     android:thumb="@drawable/sw_thumb"
                     app:track="@drawable/sw_track"
                     app:showText="false"
-                    android:layout_marginStart="12dp" />
+                    android:layout_marginStart="8dp" />
             </LinearLayout>
-
-            <!-- Toggle 2: FaceID / Biometric -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:background="@drawable/bg_r4_lowest"
-                android:padding="12dp"
-                android:layout_marginTop="8dp">
-                <FrameLayout
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:background="@drawable/bg_r2_high">
-                    <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:src="@drawable/ic_s_face"
-                        android:tint="@color/tertiary"
-                        android:layout_gravity="center" />
-                </FrameLayout>
+                android:padding="8dp"
+                android:layout_marginTop="16dp">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:layout_marginStart="12dp">
-                    <TextView
-                        android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1">
+                    <FrameLayout
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/bg_r2_high">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_s_face"
+                            android:tint="@color/tertiary"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        style="@style/Zt.BodySm"
-                        android:text="Biometric / Face ID Lock"
-                        android:textColor="@color/on_surface"
-                        android:textStyle="bold" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        style="@style/Zt.BodySm"
-                        android:text="Instant terminal authorization"
-                        android:textColor="@color/on_surface_variant"
-                        android:layout_marginTop="2dp"
-                        android:singleLine="true"
-                        android:ellipsize="end" />
+                        android:orientation="vertical"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.BodySm"
+                            android:text="Biometric / Face ID Lock"
+                            android:textColor="@color/on_surface"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:singleLine="true"
+                            android:ellipsize="end" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.BodySm"
+                            android:text="Instant terminal authorization"
+                            android:textColor="@color/on_surface_variant"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
                 </LinearLayout>
                 <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/switch_biometric"
+                    android:id="@+id/switch_bio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
@@ -1649,18 +1598,15 @@
                     android:thumb="@drawable/sw_thumb"
                     app:track="@drawable/sw_track"
                     app:showText="false"
-                    android:layout_marginStart="12dp" />
+                    android:layout_marginStart="8dp" />
             </LinearLayout>
-
-            <!-- Emergency Freeze Password / Danger Kill-Switch -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/bg_r4_error20"
-                android:padding="12dp"
+                android:padding="8dp"
                 android:layout_marginTop="16dp">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1678,12 +1624,13 @@
                             android:src="@drawable/ic_s_crisis_alert"
                             android:tint="@color/error" />
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             style="@style/Zt.HeadlineSm"
                             android:text="Emergency Freeze Password"
                             android:textColor="@color/error"
                             android:layout_marginStart="8dp"
+                            android:layout_weight="1"
                             android:singleLine="true"
                             android:ellipsize="end" />
                     </LinearLayout>
@@ -1694,84 +1641,75 @@
                         android:text="Armed"
                         android:textColor="@color/error"
                         android:textStyle="bold"
-                        android:textAllCaps="true"
-                        android:layout_marginStart="8dp" />
+                        android:layout_marginStart="8dp"
+                        android:textAllCaps="true" />
                 </LinearLayout>
-
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/Zt.BodySm"
                     android:text="Entering this override instantly cuts all VPS broker sockets, liquidates open market positions, and revokes ephemeral API keys."
                     android:textColor="@color/on_surface_variant"
-                    android:layout_marginTop="8dp"
-                    android:lineSpacingExtra="2dp" />
-
+                    android:layout_marginTop="8dp" />
                 <TextView
-                    android:id="@+id/btn_configure_freeze"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Zt.HeadlineSm"
                     android:text="Configure Freeze Protocol"
                     android:textColor="@color/error"
+                    android:id="@+id/btn_freeze"
                     android:gravity="center"
                     android:background="@drawable/bg_r2_error10"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:layout_marginTop="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground" />
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="12dp" />
             </LinearLayout>
         </LinearLayout>
-
-        <!-- ═══════════════════════════════════════════════════════════
-             SOVEREIGN COMMIT BUTTON: SAVE & HOT-RELOAD VPS CORE
-             ═══════════════════════════════════════════════════════════ -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="24dp">
-
+            android:layout_marginTop="24dp"
+            android:paddingTop="8dp">
             <LinearLayout
-                android:id="@+id/btn_save_reload"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:background="@drawable/bg_btn_gold"
+                android:id="@+id/btn_save"
+                android:background="@drawable/bg_r2_primary"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground">
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:src="@drawable/ic_s_shield"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_s_encrypted"
                     android:tint="@color/on_primary" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/Zt.HeadlineSm"
-                    android:text="SAVE &amp; HOT-RELOAD VPS CORE"
+                    style="@style/Zt.HeadlineMd"
+                    android:text="Save &amp; Hot-Reload VPS Core"
                     android:textColor="@color/on_primary"
                     android:textStyle="bold"
-                    android:letterSpacing="0.1"
-                    android:textAllCaps="true"
-                    android:layout_marginStart="8dp"
-                    android:singleLine="true"
-                    android:ellipsize="end" />
+                    android:layout_marginStart="8dp" />
             </LinearLayout>
-
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/Zt.NumSm"
                 android:text="Revision 4.89.2b • Zero telemetry leaked"
                 android:textColor="@color/on_surface_variant"
-                android:layout_gravity="center"
+                android:gravity="center"
                 android:layout_marginTop="8dp" />
         </LinearLayout>
-
     </LinearLayout>
 </ScrollView>

@@ -25,9 +25,7 @@
             android:layout_weight="1"
             android:textColor="#E3E2E6"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:singleLine="true"
-            android:ellipsize="end" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/sheet_status"
@@ -45,9 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:textColor="#D0C5AF"
-        android:textSize="12sp"
-        android:maxLines="2"
-        android:ellipsize="end" />
+        android:textSize="12sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -64,9 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:textColor="#E3E2E6"
-        android:textSize="13sp"
-        android:maxLines="4"
-        android:ellipsize="end" />
+        android:textSize="13sp" />
 
     <TextView
         android:id="@+id/sheet_conf_label"
