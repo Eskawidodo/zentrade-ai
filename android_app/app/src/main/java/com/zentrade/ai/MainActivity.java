@@ -12,6 +12,7 @@ import com.zentrade.ai.ui.agents.AgentsFragment;
 import com.zentrade.ai.ui.home.HomeFragment;
 import com.zentrade.ai.ui.journal.JournalFragment;
 import com.zentrade.ai.ui.nav.BottomNavBar;
+import com.zentrade.ai.ui.settings.SettingsFragment;
 import com.zentrade.ai.ui.trading.TradingFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -61,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case BottomNavBar.JOURNAL:
                     fragment = new JournalFragment();
+                    break;
+                case BottomNavBar.SETTINGS:
+                    fragment = new SettingsFragment();
                     break;
                 default:
                     // Placeholder untuk tab lain
