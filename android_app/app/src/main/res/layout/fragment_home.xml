@@ -89,6 +89,8 @@
                         android:textColor="@color/primary"
                         android:textSize="14sp"
                         android:textStyle="bold"
+                        android:singleLine="true"
+                        android:ellipsize="end"
                         android:layout_marginTop="4dp" />
                 </LinearLayout>
 
@@ -115,6 +117,8 @@
                         android:textColor="@color/on_surface"
                         android:textSize="14sp"
                         android:textStyle="bold"
+                        android:singleLine="true"
+                        android:ellipsize="end"
                         android:layout_marginTop="4dp" />
                 </LinearLayout>
 
@@ -145,7 +149,9 @@
                             android:text="+$3,250.80"
                             android:textColor="@color/tertiary"
                             android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:singleLine="true"
+                            android:ellipsize="end" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -251,6 +257,7 @@
                     android:paddingHorizontal="8dp"
                     android:paddingVertical="4dp"
                     android:textSize="11sp"
+                    android:singleLine="true"
                     android:layout_marginEnd="8dp" />
                     
                 <TextView
@@ -261,7 +268,8 @@
                     android:background="@drawable/bg_chip_unselected"
                     android:paddingHorizontal="8dp"
                     android:paddingVertical="4dp"
-                    android:textSize="11sp" />
+                    android:textSize="11sp"
+                    android:singleLine="true" />
             </LinearLayout>
 
             <Space android:layout_width="match_parent" android:layout_height="16dp" />

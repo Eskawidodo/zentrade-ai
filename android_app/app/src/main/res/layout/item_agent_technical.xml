@@ -36,6 +36,8 @@
                     android:textColor="@color/on_surface"
                     android:textSize="14sp"
                     android:textStyle="bold"
+                    android:singleLine="true"
+                    android:ellipsize="end"
                     android:layout_marginEnd="6dp" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -53,7 +55,9 @@
                 android:layout_height="wrap_content"
                 android:text="Triple-Monitor High Frequency"
                 android:textColor="@color/on_surface_variant"
-                android:textSize="11sp" />
+                android:textSize="11sp"
+                android:singleLine="true"
+                android:ellipsize="end" />
         </LinearLayout>
         
         <TextView
@@ -74,6 +78,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bg_rounded_container_high"
         android:orientation="vertical"
+        android:layout_marginTop="10dp"
         android:padding="12dp">
         
         <TextView
@@ -82,7 +87,9 @@
             android:text="“H1 Support touched on EURUSD (1.08250) → switching to M5 confirmation candle... Bullish engulfing printed.”"
             android:textColor="@color/on_surface"
             android:textSize="12sp"
-            android:lineSpacingExtra="2dp" />
+            android:lineSpacingExtra="2dp"
+            android:maxLines="3"
+            android:ellipsize="end" />
     </LinearLayout>
 
     <!-- Mini Sparkline visualization / pipeline -->
