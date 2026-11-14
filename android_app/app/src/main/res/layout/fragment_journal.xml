@@ -20,32 +20,35 @@
             android:layout_height="wrap_content"
             android:background="@drawable/bg_r8_signal">
             <View
-                android:layout_width="176dp"
-                android:layout_height="176dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_gravity="end|top"
-                android:layout_marginEnd="-60dp"
-                android:layout_marginTop="-60dp"
+                android:layout_marginEnd="-40dp"
+                android:layout_marginTop="-40dp"
                 android:background="@drawable/bg_glow_primary" />
             <View
-                android:layout_width="144dp"
-                android:layout_height="144dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="start|bottom"
-                android:layout_marginStart="-60dp"
-                android:layout_marginBottom="-60dp"
+                android:layout_marginStart="-40dp"
+                android:layout_marginBottom="-40dp"
                 android:background="@drawable/bg_glow_tertiary" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:padding="16dp">
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
                 <FrameLayout
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
                     android:background="@drawable/bg_r4_surface_high">
                     <ImageView
-                        android:layout_width="22dp"
-                        android:layout_height="22dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:src="@drawable/ic_s_terminal"
                         android:tint="@color/primary"
                         android:layout_gravity="center" />
@@ -54,7 +57,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginStart="12dp"
+                    android:layout_marginStart="10dp"
                     android:layout_weight="1">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -66,7 +69,8 @@
                             android:layout_height="wrap_content"
                             style="@style/Zt.HeadlineSm"
                             android:text="Cognitive Journal"
-                            android:lineSpacingExtra="4dp"
+                            android:textSize="14sp"
+                            android:lineSpacingExtra="2dp"
                             android:textColor="@color/on_surface"
                             android:textStyle="bold"
                             android:singleLine="true" />
@@ -75,13 +79,14 @@
                             android:layout_height="wrap_content"
                             style="@style/Zt.LabelCaps"
                             android:text="NODE 01"
-                            android:lineSpacingExtra="2dp"
+                            android:textSize="10sp"
+                            android:lineSpacingExtra="1dp"
                             android:textColor="@color/primary"
                             android:background="@drawable/bg_r2_highest"
-                            android:paddingStart="6dp"
-                            android:paddingEnd="6dp"
-                            android:paddingTop="2dp"
-                            android:paddingBottom="2dp"
+                            android:paddingStart="5dp"
+                            android:paddingEnd="5dp"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
                             android:layout_marginStart="8dp"
                             android:textAllCaps="false" />
                     </LinearLayout>
@@ -90,10 +95,10 @@
                         android:layout_height="wrap_content"
                         style="@style/Zt.NumSm"
                         android:text="SYNCED // VPS VECTOR DB v4.9.1"
-                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingExtra="1dp"
                         android:textColor="@color/on_surface_variant"
-                        android:textSize="11sp"
-                        android:layout_marginTop="4dp"
+                        android:textSize="10sp"
+                        android:layout_marginTop="1dp"
                         android:singleLine="true"
                         android:ellipsize="end" />
                 </LinearLayout>
