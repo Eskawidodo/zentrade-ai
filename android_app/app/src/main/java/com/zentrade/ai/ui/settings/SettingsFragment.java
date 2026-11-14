@@ -20,8 +20,9 @@ import com.zentrade.ai.R;
 import java.util.Locale;
 
 /**
- * Halaman Settings. Saat ini masih statis (data contoh dari desain);
- * penyimpanan sungguhan sebaiknya memakai penyimpanan terenkripsi (Android Keystore).
+ * Halaman Settings. Saat ini masih statis (data contoh dari desain).
+ * Aplikasi hanya dashboard + kontrol: kunci MetaApi, broker, dan LLM disimpan di server, bukan di HP.
+ * Token akses aplikasi nanti disimpan terenkripsi (Android Keystore).
  */
 public class SettingsFragment extends Fragment {
 
@@ -35,23 +36,14 @@ public class SettingsFragment extends Fragment {
     public void onViewCreated(@NonNull View v, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(v, savedInstanceState);
 
-        // Kolom rahasia: tombol mata untuk tampil / sembunyikan
+        // Token akses aplikasi: tombol mata untuk tampil / sembunyikan (kunci MetaApi/broker/LLM hanya di server)
         setupSecretToggle(v, R.id.et_vps_token, R.id.et_vps_token_toggle);
-        setupSecretToggle(v, R.id.et_llm_key, R.id.et_llm_key_toggle);
-        setupSecretToggle(v, R.id.et_broker_secret, R.id.et_broker_secret_toggle);
 
         // Protokol: HTTPS / WSS
         final View[] protocol = {v.findViewById(R.id.seg_https), v.findViewById(R.id.seg_wss)};
         for (int i = 0; i < protocol.length; i++) {
             final int idx = i;
             protocol[i].setOnClickListener(x -> selectProtocol(protocol, idx));
-        }
-
-        // Broker: MT5 / cTrader / IBKR
-        final View[] brokers = {v.findViewById(R.id.chip_mt5), v.findViewById(R.id.chip_ctrader), v.findViewById(R.id.chip_ibkr)};
-        for (int i = 0; i < brokers.length; i++) {
-            final int idx = i;
-            brokers[i].setOnClickListener(x -> selectBroker(brokers, idx));
         }
 
         // Slider max daily drawdown: 1.0% .. 10.0% (langkah 0.5)
@@ -95,18 +87,6 @@ public class SettingsFragment extends Fragment {
             boolean on = i == selected;
             t.setBackgroundResource(on ? R.drawable.bg_r2_high : R.drawable.bg_r2_lowest);
             t.setTextColor(on ? primary : muted);
-            t.setTypeface(t.getTypeface(), on ? Typeface.BOLD : Typeface.NORMAL);
-        }
-    }
-
-    private void selectBroker(View[] items, int selected) {
-        int onPrimary = ContextCompat.getColor(requireContext(), R.color.on_primary);
-        int muted = ContextCompat.getColor(requireContext(), R.color.on_surface_variant);
-        for (int i = 0; i < items.length; i++) {
-            TextView t = (TextView) items[i];
-            boolean on = i == selected;
-            t.setBackgroundResource(on ? R.drawable.bg_r2_primary : R.drawable.bg_r2_lowest);
-            t.setTextColor(on ? onPrimary : muted);
             t.setTypeface(t.getTypeface(), on ? Typeface.BOLD : Typeface.NORMAL);
         }
     }

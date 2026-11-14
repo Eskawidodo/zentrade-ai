@@ -130,8 +130,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="0dp">
+                android:gravity="center_vertical">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -147,7 +146,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         style="@style/Zt.HeadlineSm"
-                        android:text="VPS Core Execution"
+                        android:text="Server Core"
                         android:lineSpacingExtra="4dp"
                         android:textColor="@color/on_surface"
                         android:layout_marginStart="4dp"
@@ -247,7 +246,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/Zt.LabelCaps"
-                    android:text="HOST IP / DOMAIN"
+                    android:text="SERVER IP / DOMAIN"
                     android:lineSpacingExtra="2dp"
                     android:textColor="@color/on_surface_variant"
                     android:singleLine="true"
@@ -410,7 +409,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/Zt.LabelCaps"
-                    android:text="SECRET ACCESS TOKEN (JWT / ED25519)"
+                    android:text="APP ACCESS TOKEN (JWT)"
                     android:lineSpacingExtra="2dp"
                     android:textColor="@color/on_surface_variant"
                     android:singleLine="true"
@@ -453,6 +452,29 @@
                         android:clickable="true"
                         android:focusable="true" />
                 </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="top"
+                android:background="@drawable/bg_r4_lowest"
+                android:padding="8dp"
+                android:layout_marginTop="16dp">
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_s_lock"
+                    android:tint="@color/primary" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/Zt.BodySm"
+                    android:text="MetaApi, broker, and LLM keys stay on the server and are never stored on this phone."
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/on_surface_variant"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -530,8 +552,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="0dp">
+                android:gravity="center_vertical">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -582,108 +603,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginTop="16dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Zt.LabelCaps"
-                    android:text="LITELLM / PROXY BASE URL"
-                    android:lineSpacingExtra="2dp"
-                    android:textColor="@color/on_surface_variant"
-                    android:singleLine="true"
-                    android:ellipsize="end"
-                    android:textAllCaps="false" />
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp" />
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <EditText
-                        android:id="@+id/et_base_url"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bg_input"
-                        android:text="https://openrouter.ai/api/v1"
-                        android:textColor="@color/on_surface"
-                        android:textColorHint="#80D0C5AF"
-                        android:textSize="15sp"
-                        android:fontFamily="monospace"
-                        android:includeFontPadding="true"
-                        android:inputType="text"
-                        android:singleLine="true"
-                        android:ellipsize="end"
-                        android:paddingStart="12dp"
-                        android:paddingEnd="40dp"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
-                        android:importantForAutofill="no" />
-                    <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:src="@drawable/ic_s_terminal"
-                        android:tint="#99D0C5AF"
-                        android:layout_gravity="end|center_vertical"
-                        android:layout_marginEnd="12dp" />
-                </FrameLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="8dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Zt.LabelCaps"
-                    android:text="UNIVERSAL API KEY"
-                    android:lineSpacingExtra="2dp"
-                    android:textColor="@color/on_surface_variant"
-                    android:singleLine="true"
-                    android:ellipsize="end"
-                    android:textAllCaps="false" />
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp" />
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <EditText
-                        android:id="@+id/et_llm_key"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bg_input"
-                        android:text="sk-or-v1-98ad23bca0192e40f890c"
-                        android:textColor="@color/on_surface"
-                        android:textColorHint="#80D0C5AF"
-                        android:textSize="15sp"
-                        android:fontFamily="monospace"
-                        android:includeFontPadding="true"
-                        android:inputType="textPassword"
-                        android:singleLine="true"
-                        android:ellipsize="end"
-                        android:paddingStart="12dp"
-                        android:paddingEnd="40dp"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
-                        android:importantForAutofill="no" />
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/ic_s_visibility"
-                        android:tint="@color/on_surface_variant"
-                        android:id="@+id/et_llm_key_toggle"
-                        android:padding="6dp"
-                        android:layout_gravity="end|center_vertical"
-                        android:layout_marginEnd="6dp"
-                        android:clickable="true"
-                        android:focusable="true" />
-                </FrameLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="8dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -793,6 +712,29 @@
                     android:clickable="true"
                     android:focusable="true" />
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="top"
+                android:background="@drawable/bg_r4_lowest"
+                android:padding="8dp"
+                android:layout_marginTop="8dp">
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_s_lock"
+                    android:tint="@color/primary" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/Zt.BodySm"
+                    android:text="Model choice is sent to the server. API keys are managed on the server only."
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/on_surface_variant"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -805,8 +747,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="0dp">
+                android:gravity="center_vertical">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -816,13 +757,13 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/ic_s_account_balance"
+                        android:src="@drawable/ic_s_cloud"
                         android:tint="@color/primary" />
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         style="@style/Zt.HeadlineSm"
-                        android:text="Broker Gateway"
+                        android:text="MetaApi Cloud"
                         android:lineSpacingExtra="4dp"
                         android:textColor="@color/on_surface"
                         android:layout_marginStart="4dp"
@@ -834,7 +775,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/Zt.LabelCaps"
-                    android:text="DMA LINK"
+                    android:text="MT5 LINK"
                     android:lineSpacingExtra="2dp"
                     android:textColor="@color/primary"
                     android:textStyle="bold"
@@ -850,75 +791,63 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:background="@drawable/bg_r4_lowest"
+                android:padding="8dp"
                 android:layout_marginTop="16dp">
-                <TextView
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/Zt.HeadlineSm"
-                    android:text="MT5 Bridge"
-                    android:lineSpacingExtra="4dp"
-                    android:textColor="@color/on_primary"
-                    android:id="@+id/chip_mt5"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:background="@drawable/bg_r2_primary"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:layout_marginEnd="6dp"
-                    android:singleLine="true"
-                    android:ellipsize="end" />
-                <TextView
-                    android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:background="@drawable/bg_dot_tertiary"
+                            android:layout_marginEnd="8dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Zt.NumSm"
+                            android:text="ACCOUNT CONNECTED"
+                            android:lineSpacingExtra="3dp"
+                            android:textColor="@color/tertiary"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.NumSm"
+                        android:text="Deployed"
+                        android:lineSpacingExtra="3dp"
+                        android:textColor="@color/primary"
+                        android:singleLine="true"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/Zt.HeadlineSm"
-                    android:text="cTrader FIX"
-                    android:lineSpacingExtra="4dp"
-                    android:textColor="@color/on_surface_variant"
-                    android:id="@+id/chip_ctrader"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="14sp"
-                    android:textStyle="normal"
-                    android:background="@drawable/bg_r2_lowest"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:layout_marginEnd="6dp"
-                    android:singleLine="true"
-                    android:ellipsize="end" />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    style="@style/Zt.HeadlineSm"
-                    android:text="IBKR TWS"
-                    android:lineSpacingExtra="4dp"
-                    android:textColor="@color/on_surface_variant"
-                    android:id="@+id/chip_ibkr"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="14sp"
-                    android:textStyle="normal"
-                    android:background="@drawable/bg_r2_lowest"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:layout_marginEnd="0dp"
-                    android:singleLine="true"
-                    android:ellipsize="end" />
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="6dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.BodySm"
+                        android:text="Managed by MetaApi cloud, relayed through your server"
+                        android:lineSpacingExtra="4dp"
+                        android:textColor="@color/on_surface_variant"
+                        android:layout_weight="1" />
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -929,7 +858,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/Zt.LabelCaps"
-                    android:text="BROKER LIQUIDITY SERVER ID"
+                    android:text="ACCOUNT NAME"
                     android:lineSpacingExtra="2dp"
                     android:textColor="@color/on_surface_variant"
                     android:singleLine="true"
@@ -938,29 +867,20 @@
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="4dp" />
-                <FrameLayout
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <EditText
-                        android:id="@+id/et_server"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bg_input"
-                        android:text="ICMarketsSC-Live04"
-                        android:textColor="@color/on_surface"
-                        android:textColorHint="#80D0C5AF"
-                        android:textSize="15sp"
-                        android:fontFamily="monospace"
-                        android:includeFontPadding="true"
-                        android:inputType="text"
-                        android:singleLine="true"
-                        android:ellipsize="end"
-                        android:paddingStart="12dp"
-                        android:paddingEnd="12dp"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
-                        android:importantForAutofill="no" />
-                </FrameLayout>
+                    android:layout_height="wrap_content"
+                    style="@style/Zt.NumMd"
+                    android:text="ICMarketsSC-Live04"
+                    android:lineSpacingExtra="3dp"
+                    android:textColor="@color/on_surface"
+                    android:background="@drawable/bg_r2_lowest"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -972,8 +892,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="4dp">
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -987,41 +907,35 @@
                     <Space
                         android:layout_width="match_parent"
                         android:layout_height="4dp" />
-                    <FrameLayout
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <EditText
-                            android:id="@+id/et_account"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bg_input"
-                            android:text="8921004"
-                            android:textColor="@color/on_surface"
-                            android:textColorHint="#80D0C5AF"
-                            android:textSize="15sp"
-                            android:fontFamily="monospace"
-                            android:includeFontPadding="true"
-                            android:inputType="number"
-                            android:singleLine="true"
-                            android:ellipsize="end"
-                            android:paddingStart="12dp"
-                            android:paddingEnd="12dp"
-                            android:paddingTop="10dp"
-                            android:paddingBottom="10dp"
-                            android:importantForAutofill="no" />
-                    </FrameLayout>
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.NumMd"
+                        android:text="8921004"
+                        android:lineSpacingExtra="3dp"
+                        android:textColor="@color/on_surface"
+                        android:background="@drawable/bg_r2_lowest"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:singleLine="true"
+                        android:ellipsize="end" />
                 </LinearLayout>
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="1dp" />
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:layout_marginStart="4dp">
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/Zt.LabelCaps"
-                        android:text="ROUTING SPREAD"
+                        android:text="PLATFORM"
                         android:lineSpacingExtra="2dp"
                         android:textColor="@color/on_surface_variant"
                         android:singleLine="true"
@@ -1030,85 +944,99 @@
                     <Space
                         android:layout_width="match_parent"
                         android:layout_height="4dp" />
-                    <FrameLayout
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <EditText
-                            android:id="@+id/et_spread"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bg_input"
-                            android:text="Raw ECN Zero"
-                            android:textColor="@color/tertiary"
-                            android:textColorHint="#80D0C5AF"
-                            android:textSize="15sp"
-                            android:fontFamily="monospace"
-                            android:includeFontPadding="true"
-                            android:inputType="text"
-                            android:singleLine="true"
-                            android:ellipsize="end"
-                            android:paddingStart="12dp"
-                            android:paddingEnd="12dp"
-                            android:paddingTop="10dp"
-                            android:paddingBottom="10dp"
-                            android:importantForAutofill="no"
-                            android:focusable="false"
-                            android:cursorVisible="false" />
-                    </FrameLayout>
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.NumMd"
+                        android:text="MT5"
+                        android:lineSpacingExtra="3dp"
+                        android:textColor="@color/tertiary"
+                        android:background="@drawable/bg_r2_lowest"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:singleLine="true"
+                        android:ellipsize="end" />
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:orientation="horizontal"
+                android:gravity="top"
                 android:layout_marginTop="8dp">
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    style="@style/Zt.LabelCaps"
-                    android:text="ENCRYPTED TRADING SECRET"
-                    android:lineSpacingExtra="2dp"
-                    android:textColor="@color/on_surface_variant"
-                    android:singleLine="true"
-                    android:ellipsize="end"
-                    android:textAllCaps="false" />
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp" />
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <EditText
-                        android:id="@+id/et_broker_secret"
-                        android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bg_input"
-                        android:text="mk7_f8902_prod_rsa"
-                        android:textColor="@color/on_surface"
-                        android:textColorHint="#80D0C5AF"
-                        android:textSize="15sp"
-                        android:fontFamily="monospace"
-                        android:includeFontPadding="true"
-                        android:inputType="textPassword"
+                        style="@style/Zt.LabelCaps"
+                        android:text="SYNC STATE"
+                        android:lineSpacingExtra="2dp"
+                        android:textColor="@color/on_surface_variant"
                         android:singleLine="true"
                         android:ellipsize="end"
+                        android:textAllCaps="false" />
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.NumMd"
+                        android:text="Synchronized"
+                        android:lineSpacingExtra="3dp"
+                        android:textColor="@color/tertiary"
+                        android:background="@drawable/bg_r2_lowest"
                         android:paddingStart="12dp"
-                        android:paddingEnd="40dp"
+                        android:paddingEnd="12dp"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
-                        android:importantForAutofill="no" />
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/ic_s_visibility"
-                        android:tint="@color/on_surface_variant"
-                        android:id="@+id/et_broker_secret_toggle"
-                        android:padding="6dp"
-                        android:layout_gravity="end|center_vertical"
-                        android:layout_marginEnd="6dp"
-                        android:clickable="true"
-                        android:focusable="true" />
-                </FrameLayout>
+                        android:singleLine="true"
+                        android:ellipsize="end" />
+                </LinearLayout>
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="1dp" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.LabelCaps"
+                        android:text="REGION"
+                        android:lineSpacingExtra="2dp"
+                        android:textColor="@color/on_surface_variant"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textAllCaps="false" />
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Zt.NumMd"
+                        android:text="Singapore"
+                        android:lineSpacingExtra="3dp"
+                        android:textColor="@color/on_surface"
+                        android:background="@drawable/bg_r2_lowest"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:singleLine="true"
+                        android:ellipsize="end" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
         <FrameLayout
@@ -1131,8 +1059,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:layout_marginBottom="0dp">
+                    android:gravity="center_vertical">
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -1160,7 +1087,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/Zt.LabelCaps"
-                        android:text="VPS ENFORCED"
+                        android:text="SERVER ENFORCED"
                         android:lineSpacingExtra="2dp"
                         android:textColor="@color/error"
                         android:textStyle="bold"
@@ -1203,7 +1130,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 style="@style/Zt.BodySm"
-                                android:text="VPS auto-liquidates on threshold"
+                                android:text="Server auto-liquidates on threshold"
                                 android:lineSpacingExtra="4dp"
                                 android:textColor="@color/on_surface_variant"
                                 android:layout_marginTop="2dp" />
@@ -1398,8 +1325,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="0dp">
+                android:gravity="center_vertical">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -1553,8 +1479,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="0dp">
+                android:gravity="center_vertical">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -1766,7 +1691,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/Zt.BodySm"
-                    android:text="Entering this override instantly cuts all VPS broker sockets, liquidates open market positions, and revokes ephemeral API keys."
+                    android:text="Entering this override instantly cuts all MetaApi connections, liquidates open market positions, and revokes ephemeral API keys."
                     android:lineSpacingExtra="4dp"
                     android:textColor="@color/on_surface_variant"
                     android:layout_marginTop="8dp" />
@@ -1817,7 +1742,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/Zt.HeadlineSm"
-                    android:text="SAVE &amp; HOT-RELOAD VPS CORE"
+                    android:text="SAVE &amp; HOT-RELOAD SERVER"
                     android:lineSpacingExtra="4dp"
                     android:textColor="@color/on_primary"
                     android:textSize="14sp"
